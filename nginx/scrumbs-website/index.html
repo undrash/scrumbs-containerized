@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Scrumbs Landing Page</title>
     <link rel="stylesheet" href="style-reset.css">
     <link rel="stylesheet" href="scrumbs-stylesheet.css">
@@ -22,16 +23,19 @@
 
         </div>
 
+
         <div id="authentication-container">
 
-        <div id="sign-in-btn">
+            <div id="sign-in-btn">
 
             <a class="navbar-button-style">Sign-In</a>
 
-        </div>
-            <a href="http://192.168.99.100:4200"><div id="get-started-btn-navbar" class="primary-button">Get Started for free</div></a>
+            </div>
+
+            <div id="get-started-btn-navbar" class="primary-button">Get Started for free</div>
 
         </div>
+
 
         <div id="navbar-menu-btn">
 
@@ -41,81 +45,67 @@
 
     </div>
 
+
     <div id="above-the-fold" class="clear">
 
+        <div class="left-container">
 
+            <div class="main-title">Tracking your daily scrum meetings has never been easier.</div>
+            <div class="primary-text">Scrumbs is a lightweight agile management tool, designed to make the scrum masters life easier. Keep logs of the daily scrum meetings, know what your team is up to, manage blockers, and generate reports. It has never been easier, and we don't charge you a dime.</div>
+            <div id="get-started-btn-above-the-fold" class="primary-button">Get Started for free</div>
+            <div id="sign-in-option" class="secondary-text">Already have an account? <a class="link">Sign In.</a></div>
 
-           <div class="left-container">
+        </div>
 
-                <div class="main-title">Tracking your daily scrum meetings has never been easier.</div>
-                <div class="primary-text">Scrumbs is a lightweight agile management tool, designed to make the scrum masters life easier. Keep logs of the daily scrum meetings, know what your team is up to, manage blockers, and generate reports. It has never been easier, and we don't charge you a dime.</div>
-                <div id="get-started-btn-above-the-fold" class="primary-button">Get Started for free</div>
-                <div id="sign-in-option" class="secondary-text">Already have an account? <a class="link">Sign In.</a></div>
-
-
-            </div>
-
-            <div class="right-container cover-image">
-
-                <!--<img src="images/illustration.png">-->
-
-            </div>
+        <div class="right-container cover-image"></div>
 
     </div>
 
+
     <div id="features">
 
-        <div id="features-container">
+        <div id="logs-feature-card" class="feature-card ">
 
+            <img class="feature-card-icon" src="images/logs-icon.svg">
 
-            <div id="logs-feature-card" class="feature-card ">
+            <div class="secondary-title">Logs</div>
+            <div class="secondary-text card-description">Keep logs of your daily stand-up meetings. Easily track what each person in your team has been up to.</div>
 
-                <img class="feature-card-icon" src="images/logs-icon.svg">
+        </div>
 
-                <div class="secondary-title">Logs</div>
-                <div class="secondary-text card-description">Keep logs of your daily stand-up meetings. Easily track what each person in your team has been up to.</div>
+        <div id="blockers-feature-card" class="feature-card">
 
-            </div>
+            <img class="feature-card-icon" src="images/blocker-icon.svg">
 
-            <div id="blockers-feature-card" class="feature-card">
-
-                <img class="feature-card-icon" src="images/blocker-icon.svg">
-
-                <div class="secondary-title">Blockers</div>
-                <div class="secondary-text card-description">Create and manage blockers. Keep an eye on what is slowing the development process.</div>
-
-            </div>
-
-
-            <div id="integrations-feature-card" class="feature-card">
-
-                <img class="feature-card-icon" src="images/integrations-icon.svg">
-
-                <div class="secondary-title">Integrations</div>
-                <div class="secondary-text card-description">Scrumbs works with agile tools you already use. Forward your data without ever leaving the app.</div>
-
-            </div>
-
-            <div id="reports-feature-card" class="feature-card">
-
-                <img class="feature-card-icon" src="images/reports-icon.svg">
-
-                <div class="secondary-title">Reports</div>
-                <div class="secondary-text card-description">Generate reports of logs and blockers in the system, make better decisions based on your data.</div>
-
-
-            </div>
-
-
+            <div class="secondary-title">Blockers</div>
+            <div class="secondary-text card-description">Create and manage blockers. Keep an eye on what is slowing the development process.</div>
 
         </div>
 
 
+        <div id="integrations-feature-card" class="feature-card">
+
+            <img class="feature-card-icon" src="images/integrations-icon.svg">
+
+            <div class="secondary-title">Integrations</div>
+            <div class="secondary-text card-description">Scrumbs works with agile tools you already use. Forward your data without ever leaving the app.</div>
+
+        </div>
+
+        <div id="reports-feature-card" class="feature-card">
+
+            <img class="feature-card-icon" src="images/reports-icon.svg">
+
+            <div class="secondary-title">Reports</div>
+            <div class="secondary-text card-description">Generate reports of logs and blockers in the system, make better decisions based on your data.</div>
+
+        </div>
+
     </div>
 
 
 
-    <div id="scrumbs-description1">
+    <div id="section-1">
 
         <div class="left-container left-ui"></div>
 
@@ -129,10 +119,7 @@
     </div>
 
 
-
-
-
-    <div id="scrumbs-description2">
+    <div id="section-2">
 
         <div class="left-container left-description">
 
@@ -169,6 +156,7 @@
         <div class="right-container right-ui"></div>
 
     </div>
+
 
     <div id="footer">
 
