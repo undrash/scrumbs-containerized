@@ -6,7 +6,7 @@ services:
   nginx:
     build:
       context: ./nginx
-      dockerfile: Dockerfile.prod
+      dockerfile: nginx/Dockerfile.dev
     depends_on:
       - api
     restart: always

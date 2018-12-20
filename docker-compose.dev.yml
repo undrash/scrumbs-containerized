@@ -3,25 +3,10 @@ version: "3.1"
 
 services:
 
-  api:
-    build:
-          context: ./api
-          dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    depends_on:
-      - mongo
-    restart: always
-
-  mongo:
-    image: mongo
-    ports:
-      - "2717:2717"
-
   nginx:
     build:
       context: ./nginx
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     depends_on:
       - api
     restart: always
@@ -29,6 +14,24 @@ services:
       - "80:80"
       - "4200:4200"
       - "4300:4300"
+    networks:
+      - scrumbs
+
+  api:
+    build:
+          context: ./api
+          dockerfile: Dockerfile
+    depends_on:
+      - mongo
+    restart: always
+    networks:
+          - scrumbs
+
+  mongo:
+    image: mongo
+    expose:
+      - "2717"
+
 
   subscribe:
     build:
@@ -37,8 +40,6 @@ services:
     depends_on:
       - postgres
     restart: always
-    ports:
-      - "4000:4000"
     command: ["./wait-for-it.sh", "postgres:5432", "--", "npm", "start"]
 
   postgres:
@@ -46,5 +47,8 @@ services:
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: scrumbs-subscribers
-    ports:
-      - "5432:5432"
+    expose:
+      - "5432"
+
+networks:
+  scrumbs:
