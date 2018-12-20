@@ -1,0 +1,165 @@
+
+@import "color-variables";
+@import "mixins";
+@import "main";
+
+
+
+#blockers-view-container {
+  padding: 30px 20px 0 20px;
+}
+
+
+
+ul.list-clear {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+.blocker-item {
+  display: flex;
+  position: relative;
+  margin: 5px auto;
+
+  label {
+    text-transform: none;
+    line-height: 20px;
+  }
+
+}
+
+
+
+/* Input style */
+.blocker-item-input{
+  margin-left: 20px;
+
+  input[type="checkbox"] {
+    display: none;
+
+  }
+}
+
+
+
+.blocker-item-input input[type="checkbox"] ~ .blocker-item-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: $quinary-color;
+  border: 1px solid $septenary-support-color;
+  cursor: pointer;
+}
+
+
+
+.blocker-item-input input[type="checkbox"]:checked ~ .blocker-item-checkmark {
+  border: 1px solid $octonary-support-color;
+}
+
+
+
+.blocker-item-input input[type="checkbox"] ~ .blocker-item-checkmark:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: $octonary-support-color;
+  transform: translate(4px, 8px) rotate(45deg);
+  transform-origin: left;
+  transition: all 150ms;
+  transition-delay: 150ms;
+}
+
+
+
+.blocker-item-input input[type="checkbox"] ~ .blocker-item-checkmark:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: $octonary-support-color;
+  transform: translate(7px, 12px) rotate(-45deg);
+  transform-origin: left;
+  transition: all 150ms;
+  transition-delay: 0ms;
+}
+
+
+
+.blocker-item-input input[type="checkbox"]:checked ~ .blocker-item-checkmark:before {
+  width: 4px;
+  transition-delay: 0ms;
+}
+
+
+
+.blocker-item-input input[type="checkbox"]:checked ~ .blocker-item-checkmark:after {
+  width: 12px;
+  transition-delay: 150ms;
+}
+
+
+
+/* Label style */
+.blocker-item-text {
+  padding: 0 10px;
+}
+
+
+
+.blocker-item-text label {
+  cursor: pointer;
+  color: $text-primary-color;
+}
+
+
+
+.blocker-item.ready .blocker-item-text label{
+  text-decoration: line-through;
+  color: #736f86;
+}
+
+
+
+/* User style */
+.blocker-item span.user {
+  display: inline-table;
+  font-size: 0.65em;
+  background-color: $primary-complementary-color;
+  color: $text-quaternary-color;
+  border-radius: $secondary-radius;
+  padding: 4px 7px;
+}
+
+
+
+#unsolved-blockers-container {
+  opacity: 0;
+  min-height: 50px;
+}
+
+
+
+#solved-blockers-container {
+  opacity: 0;
+}
+
+
+
+.toggle-solved-blockers-visibility-btn {
+  display: block;
+  margin: 25px 0;
+  background: $quaternary-support-color;
+  color: $text-primary-color;
+  border: none;
+  border-radius: $secondary-radius;
+  font-size: 0.75em;
+  padding: 7px 15px;
+  opacity: 0;
+}

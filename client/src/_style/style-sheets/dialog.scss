@@ -1,0 +1,92 @@
+
+@import "color-variables";
+@import "mixins";
+@import "authentication";
+
+
+
+#dialog-container {
+
+  width: 455px;
+  height: 360px;
+  background-color: $quinary-color;
+  margin: 30% auto auto;
+  position: absolute;
+  @include center-layout( "horizontal" );
+  border-radius: $secondary-radius;
+  @include drop-shadow( $senary-support-color, 65px, 15px );
+  opacity: 0;
+
+
+  .close-dialog {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: url("../img/icons/cancel-icon.svg") no-repeat 40% 40%;
+    cursor: pointer;
+  }
+
+
+  .dialog-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: $text-octonary-color;
+    overflow: hidden;
+    max-height: 3.9em;
+    margin: 75px auto auto;
+    text-overflow: ellipsis;
+    max-width: 425px;
+    letter-spacing: 0.02em;
+  }
+
+
+  .dialog-message {
+    color: $text-septenary-color;
+    text-align: center;
+    margin: 17px auto auto;
+    max-width: 300px;
+    font-size: 1em;
+    max-height: 2.7em;
+    overflow: hidden;
+  }
+
+
+  .dialog-button-container {
+    display: inline-block;
+    @include center-layout( 'horizontal' );
+    bottom: 30px;
+  }
+
+
+  .dialog-submit-button {
+    width: 345px;
+    height: 50px;
+    font-size: 1.1em;
+    //letter-spacing: 1px;
+    line-height: 50px;
+    text-overflow: ellipsis;
+
+  }
+
+
+  .dialog-cancel-button {
+    height: 50px;
+    margin-top: 25px;
+    font-size: 1.1em;
+    //letter-spacing: 0.02em;
+    border-radius: $primary-radius;
+    border: 1px solid transparent;
+    transition: all 0.5s ease-in-out;
+
+      &:hover {
+        border-color: $septenary-color;
+      }
+  }
+
+}
+
+
+

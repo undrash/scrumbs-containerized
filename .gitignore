@@ -1,0 +1,7 @@
+.idea/
+client/node_modules
+api/node_modules
+api/dist
+subscriptions/node_modules
+subscriptions/ormconfig.json
+**/*.env

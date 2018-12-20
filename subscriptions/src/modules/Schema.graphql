@@ -1,0 +1,16 @@
+
+
+type Subscriber {
+    id: String!
+    name: String!
+    email: String!
+}
+
+
+
+type Query {
+    getSubscribers(pass: String!): [Subscriber!]!,
+    unSubscribe(id: String!): String
+    subscribe(name: String!, email: String!): Boolean
+}
+

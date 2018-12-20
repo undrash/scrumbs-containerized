@@ -1,0 +1,238 @@
+
+
+///** ============================= LIGHT THEME ============================= **/
+
+/** Colors */
+
+//$primary-color: #9679FF;
+$primary-color: #7985ff;
+$secondary-color: #F3F2FC;
+
+$tertiary-color: #d6e3eb;
+$quaternary-color: #B2B0C4;
+
+$quinary-color: #FFFFFF;
+$senary-color: #F6F6F8;
+$septenary-color: #8dacff;
+$octonary-color: #FFFFFF;
+$nonary-color: #FFFFFF;
+$denary-color: #CCCCCC;
+
+
+
+/** Support colors (for gradients) */
+
+//$primary-support-color: #4D78FF;
+$primary-support-color: #6cb7ff;
+$secondary-support-color: #e7e5ff;
+$tertiary-support-color: #8597ff;
+$quaternary-support-color: #efeafe;
+$quinary-support-color: #FBFBFB;
+$senary-support-color: #dedde6;
+$septenary-support-color: #D0DDE5;
+$octonary-support-color: #9679FF;
+$nonary-support-color: #000;
+$denary-support-color: #000;
+
+
+
+/** Complementary colors */
+
+$primary-complementary-color: #f4f3f6;
+$secondary-complementary-color: #000;
+$tertiary-complementary-color: #000;
+$quaternary-complementary-color: #000;
+$quinary-complementary-color: #000;
+$senary-complementary-color: #000;
+$septenary-complementary-color: #000;
+$octonary-complementary-color: #000;
+$nonary-complementary-color: #000;
+$denary-complementary-color: #000;
+
+
+
+/** Accents  */
+
+$primary-accent: #7ED321;
+$secondary-accent: #F75FA3;
+$tertiary-accent: #FFC500;
+$quaternary-accent: #f967be;
+$quinary-accent: #e9e5fd;
+$senary-accent: #000;
+$septenary-accent: #000;
+$octonary-accent: #000;
+$nonary-accent: #000;
+$denary-accent: #000;
+
+
+
+/** Text Colors */
+
+$text-primary-color: #242246;
+$text-secondary-color: #605E77;
+$text-tertiary-color: #6A7187;
+$text-quaternary-color: #80879B;
+$text-quinary-color: #A6A9B4;
+$text-senary-color: #242246;
+$text-septenary-color: #9da1a6;
+$text-octonary-color: #3c444e;
+$text-color-error: #F55623;
+
+
+
+/**  Drop Shadows */
+
+$shadow-primary-color: rgba(118, 115, 255, 0.5);
+$shadow-secondary-color: rgba( 74,144,226, 0.1 );
+$shadow-tertiary-color: rgba(126, 211, 33, 0.5);
+$shadow-quaternary-color: rgba( 178, 176, 196, 0.27 );
+$shadow-quinary-color: #000;
+$shadow-senary-color: #000;
+$shadow-septenary-color: #000;
+$shadow-octonary-color: #000;
+$shadow-nonary-color: #000;
+$shadow-denary-color: #000;
+
+
+/** Highlights */
+
+$primary-line-highlight: rgba(255, 197, 0, 0.25);
+$secondary-line-highlight: rgba(231, 158, 7, 0.25);
+$tertiary-line-highlight: rgba(245, 86, 35, 0.25);
+$quaternary-line-highlight: rgba(208, 2, 27, 0.25);
+$quinary-line-highlight: rgba(247, 95, 163, 0.25);
+$senary-line-highlight: rgba(144, 19, 254, 0.25);
+$septenary-line-highlight: rgba(47, 133, 234, 0.25);
+$octonary-line-highlight: rgba(0, 179, 208, 0.25);
+$nonary-line-highlight: rgba(0, 208, 18, 0.25);
+$denary-line-highlight: rgba(145, 185, 27, 0.25);
+
+$primary-highlight: #FFC500;
+$secondary-highlight: #E79E07;
+$tertiary-highlight: #F55623;
+$quaternary-highlight: #D0021B;
+$quinary-highlight: #F75FA3;
+$senary-highlight: #9013FE;
+$septenary-highlight: #2F85EA;
+$octonary-highlight: #00B3D0;
+$nonary-highlight: #00D012;
+$denary-highlight: #91B91B;
+
+$logo-path-variable: "../img/scrumbs-logo-test.png";
+
+
+
+///** ============================= DARK THEME ============================= **/
+
+///** Colors */
+//
+//$primary-color: #6487e5;
+//$secondary-color: #1d1f32;
+//
+//$tertiary-color: #191a2b;
+//$quaternary-color: #B2B0C4;
+//
+//$quinary-color: #282744;
+//$senary-color: #282744;
+//$septenary-color: #6487e5;
+//$octonary-color: #FFFFFF;
+//$nonary-color: #1d1f32;
+//$denary-color: #363556;
+//
+//
+//
+///** Support colors (for gradients) */
+//
+//$primary-support-color: #6487e5;
+//$secondary-support-color: #23233c;
+//$tertiary-support-color: #9f8bff;
+//$quaternary-support-color: #000;
+//$quinary-support-color: #1c1e32;
+//$senary-support-color: #000;
+//$septenary-support-color: #000;
+//$octonary-support-color: #000;
+//$nonary-support-color: #000;
+//$denary-support-color: #000;
+//
+//
+//
+///** Complementary colors */
+//
+//$primary-complementary-color: #000;
+//$secondary-complementary-color: #000;
+//$tertiary-complementary-color: #000;
+//$quaternary-complementary-color: #000;
+//$quinary-complementary-color: #000;
+//$senary-complementary-color: #000;
+//$septenary-complementary-color: #000;
+//$octonary-complementary-color: #000;
+//$nonary-complementary-color: #000;
+//$denary-complementary-color: #000;
+//
+//
+//
+///** Accents  */
+//
+//$primary-accent: #7ED321;
+//$secondary-accent: #F75FA3;
+//$tertiary-accent: #FFC500;
+//$quaternary-accent: #f967be;
+//$quinary-accent: #e9e5fd;
+//$senary-accent: #000;
+//$septenary-accent: #000;
+//$octonary-accent: #000;
+//$nonary-accent: #000;
+//$denary-accent: #000;
+//
+//
+//
+///** Text Colors */
+//
+//$text-primary-color: #a0a6be;
+//$text-secondary-color: #80869c;
+//$text-tertiary-color: #aeb4cd;
+//$text-quaternary-color: #80879B;
+//$text-quinary-color: #666c8d;
+//$text-senary-color: #d2d8f0;
+//
+//
+//
+///**  Drop Shadows */
+//
+//$shadow-primary-color: #1d1c31;
+//$shadow-secondary-color: #131427;
+//$shadow-tertiary-color: #1d1c31;
+//$shadow-quaternary-color: #1d1c31;
+//$shadow-quinary-color: #000;
+//$shadow-senary-color: #000;
+//$shadow-septenary-color: #000;
+//$shadow-octonary-color: #000;
+//$shadow-nonary-color: #000;
+//$shadow-denary-color: #000;
+//
+//
+///** Highlights */
+//
+//$primary-line-highlight: rgba(255, 197, 0, 0.25);
+//$secondary-line-highlight: rgba(231, 158, 7, 0.25);
+//$tertiary-line-highlight: rgba(245, 86, 35, 0.25);
+//$quaternary-line-highlight: rgba(208, 2, 27, 0.25);
+//$quinary-line-highlight: rgba(247, 95, 163, 0.25);
+//$senary-line-highlight: rgba(144, 19, 254, 0.25);
+//$septenary-line-highlight: rgba(47, 133, 234, 0.25);
+//$octonary-line-highlight: rgba(0, 179, 208, 0.25);
+//$nonary-line-highlight: rgba(0, 208, 18, 0.25);
+//$denary-line-highlight: rgba(145, 185, 27, 0.25);
+//
+//$primary-highlight: #FFC500;
+//$secondary-highlight: #E79E07;
+//$tertiary-highlight: #F55623;
+//$quaternary-highlight: #D0021B;
+//$quinary-highlight: #F75FA3;
+//$senary-highlight: #9013FE;
+//$septenary-highlight: #2F85EA;
+//$octonary-highlight: #00B3D0;
+//$nonary-highlight: #00D012;
+//$denary-highlight: #91B91B;
+//
+//$logo-path-variable: "../img/scrumbs-logo-test-dark-theme.png";

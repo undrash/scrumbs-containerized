@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "inlineSources": true,
+    "sourceMap": true,
+    "outDir": "_desktop/js",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*"]
+    }
+  },
+  "include": [
+    "app/**/*"
+  ],
+  "files": [
+    "./typings/index.d.ts",
+    "./node_modules/electron/electron.d.ts"
+  ]
+}

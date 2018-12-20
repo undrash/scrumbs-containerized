@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "removeComments": true,
+    "sourceMap": true,
+    "outFile": "gulp-output.js"
+  },
+  "exclude": [
+    "node_modules",
+    "app",
+    "_desktop"
+  ]
+}

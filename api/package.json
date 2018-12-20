@@ -1,0 +1,45 @@
+{
+  "name": "scrumbs-server",
+  "description": "Scrumbs application API",
+  "version": "1.0.0",
+  "repository": "https://github.com/gasparandr/scrumbs-server.git",
+  "scripts": {
+    "start": "tsc && node ./dist/Index.js",
+    "ts": "tsc -w",
+    "server": "nodemon ./dist/Index.js",
+    "sv": "node ./dist/Index.js"
+  },
+  "devDependencies": {
+    "@types/async": "^2.0.50",
+    "@types/bcrypt": "^3.0.0",
+    "@types/dotenv": "^6.1.0",
+    "@types/ejs": "^2.6.0",
+    "@types/express": "^4.16.0",
+    "@types/jwt-simple": "^0.5.33",
+    "@types/moment": "^2.13.0",
+    "@types/mongoose": "^5.2.18",
+    "@types/node": "^10.11.4",
+    "@types/nodemailer": "^4.6.5",
+    "@types/passport": "^0.4.7",
+    "@types/passport-jwt": "^3.0.1",
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "helmet": "^3.13.0",
+    "jwt-simple": "^0.5.5",
+    "moment": "^2.22.2",
+    "mongoose": "^5.3.1",
+    "morgan": "^1.9.1",
+    "nodemailer": "^4.6.8",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  }
+}

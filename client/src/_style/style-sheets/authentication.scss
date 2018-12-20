@@ -1,0 +1,239 @@
+
+@import "style-fonts";
+@import "style-resets";
+@import "color-variables";
+@import "mixins";
+@import "main";
+
+
+
+#content-container {
+  position: absolute;
+  width: 80%;
+  height: 200%;
+  top: -105%;
+  z-index: 2;
+  border-radius: $secondary-radius;
+  background-color: $quinary-color;
+  @include center-layout( 'horizontal' );
+  @include drop-shadow( $shadow-secondary-color, 37px, 28px );
+}
+
+
+.button-primary, .button-secondary {
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  position: relative;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    @include center-layout();
+  }
+}
+
+
+
+.button-primary {
+  border-radius: $primary-radius;
+  color: $octonary-color;
+  @include drop-shadow( $shadow-primary-color, 15px, 20px, 0, -15px );
+  @include gradient( $primary-color,$primary-support-color );
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    @include drop-shadow( $shadow-primary-color, 15px, 23px, 0, -15px );
+  }
+
+}
+
+
+
+.button-secondary {
+  color: $septenary-color;
+}
+
+
+
+.authentication-wrapper {
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+
+}
+
+
+
+#authentication-container {
+
+  position: absolute;
+  width: 350px;
+  margin-top: -85px;
+  top: calc( 50% + 60px );
+  opacity: 0;
+  left: 50%;
+  transform: translate( -50%, -50% );
+
+  .authentication-header {
+    top: 90px;
+    height: 85px;
+    text-align: center;
+    margin-bottom: 35px;
+    position: relative;
+
+    .authentication-header-login, .authentication-header-signup {
+      position: absolute;
+    }
+
+    .authentication-header-title {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: $text-tertiary-color;
+      margin-bottom: 10px;
+    }
+
+    .authentication-header-subtitle {
+      font-size: 1em;
+      line-height: 1.45em;
+      color: $text-quaternary-color;
+      padding: 0 5px;
+    }
+
+  }
+
+
+  .authentication-footer {
+    margin-top: 25px;
+    position: fixed;
+    width: 100%;
+
+
+    .primary-btn-loading {
+      color: transparent;
+      box-shadow: none;
+      @include gradient( $septenary-color, $septenary-color );
+    }
+
+
+    .primary-btn-loading-animation {
+      background: $septenary-color url("../img/auth-loader-animation.gif") no-repeat center;
+      background-size: 35px;
+    }
+
+    .secondary-btn-loading {
+      color: transparent;
+    }
+
+
+  }
+
+
+  .input-row {
+    margin-bottom: 15px;
+  }
+
+
+  .input-name-wrapper {
+
+    .input-row  {
+      width: 50%;
+
+      &:first-child {
+        float: left;
+      }
+
+      &:last-child {
+        float: right;
+        input {
+          border-left: none;
+        }
+      }
+
+    }
+
+  }
+
+
+  .checkbox-wrapper {
+    height: 20px;
+    position: relative;
+
+    label {
+      @include center-layout( false );
+    }
+
+    a {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $primary-color;
+      font-size: 0.85em;
+    }
+  }
+
+  .button-secondary {
+    margin-top: 10px;
+  }
+
+
+
+}
+
+
+
+@media screen and ( max-width: 1024px ) {}
+
+
+
+@media screen and ( max-width: 950px ) {}
+
+
+
+@media screen and ( max-width: 800px ) {
+
+
+  // Content Container
+  #content-container {
+    width: 85%;
+  }
+
+
+
+}
+
+
+
+@media screen and ( max-width: 768px ) {}
+
+
+
+@media screen and ( max-width: 480px ) {
+
+
+  // Content Container
+  #content-container {
+    width: calc( 100% - 20px );
+    margin: 0 auto;
+  }
+
+
+  #authentication-container {
+    width: calc(100% - 55px);
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+

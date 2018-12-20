@@ -1,0 +1,392 @@
+
+@import "style-fonts";
+@import "color-variables";
+@import "mixins";
+@import "main";
+
+
+
+#records-view-container {
+
+  padding: 20px 17px;
+
+}
+
+
+
+.record-container {
+  border-bottom: 1px solid $secondary-support-color;
+
+  .record-header {
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    position: relative;
+
+    &.active {
+      font-size: 1.2em;
+
+      .record-name {
+        color: $text-senary-color;
+      }
+
+    }
+
+    .record-name, .record-dropdown-icon {
+      @include center-layout( 'vertical' );
+    }
+
+    .record-name {
+      position: absolute;
+    }
+
+    .record-dropdown-icon {
+      right: 10px;
+      width: 10px;
+      height: 10px;
+      background: url( "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI2cHgiIHZpZXdCb3g9IjAgMCAxMCA2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IHNrZXRjaHRvb2wgNTAgKDU0OTgzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5CMUM3MUUxQS0zRTAyLTQ4NkQtOEQ5OS0xNDY5NjVDQTFBRkE8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIHNrZXRjaHRvb2wuPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IlRlYW0tTm90ZXMtOTUwcHgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05MjUuMDAwMDAwLCAtMjIuMDAwMDAwKSIgZmlsbD0iIzk2NzlGRiIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGcgaWQ9Ik5hdmJhciI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOTMyLjU3Nzg5NiwyNS4yNzI4MjkyIEw5MjguMzg3MjkxLDI5LjU3MjUzNjggQzkyOC4xMjA3MTgsMjkuODQ2MTkxNCA5MjcuNjg4NTE1LDI5Ljg0NjE5MTQgOTI3LjQyMjA3MSwyOS41NzI1MzY4IEM5MjcuMTU1NjA2LDI5LjI5OTEyNTcgOTI3LjE1NTYwNiwyOC44NTU2NzkxIDkyNy40MjIwNzEsMjguNTgyMjkwMSBMOTMxLjEzMDExLDI0Ljc3NzcwNTkgTDkyNy40MjIxNzksMjAuOTczMjU0MyBDOTI3LjE1NTcxNCwyMC42OTk3MzI2IDkyNy4xNTU3MTQsMjAuMjU2MzMwMyA5MjcuNDIyMTc5LDE5Ljk4MjkxOTEgQzkyNy42ODg2NDQsMTkuNzA5Mzk3MyA5MjguMTIwODI1LDE5LjcwOTM5NzMgOTI4LjM4NzM5OSwxOS45ODI5MTkxIEw5MzIuNTc4MDA0LDI0LjI4MjY5MzIgQzkzMi43MTEyMzcsMjQuNDE5NDY1MSA5MzIuNzc3Nzc4LDI0LjU5ODUzMDIgOTMyLjc3Nzc3OCwyNC43Nzc2ODM3IEM5MzIuNzc3Nzc4LDI0Ljk1NjkyNTggOTMyLjcxMTEwOCwyNS4xMzYxMjM2IDkzMi41Nzc4OTYsMjUuMjcyODI5MiBaIiBpZD0iZGQtYXJyb3ciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkzMC4wMDAwMDAsIDI0Ljc3Nzc3OCkgcm90YXRlKC0yNzAuMDAwMDAwKSB0cmFuc2xhdGUoLTkzMC4wMDAwMDAsIC0yNC43Nzc3NzgpICI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=" )
+      no-repeat
+      center;
+      background-size: contain;
+    }
+
+
+    .record-options-wrapper {
+
+      position: absolute;
+      top: 0;
+      right: -17px;
+      width: 33px;
+      height: 65px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+      }
+
+    }
+
+
+    .record-options-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      //right: -100%;
+      width: 100%;
+      height: 100%;
+      border-radius: 0
+      $secondary-radius
+      $secondary-radius
+      0;
+      overflow: hidden;
+
+
+      button {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 32px;
+        background-color: $primary-color;
+        border: none;
+      }
+
+
+      .button-delete-record {
+        bottom: 0;
+      }
+
+    }
+
+    .edit-record-input {
+      border: 0;
+      padding-left: 0;
+      font-weight: bold;
+      font-size: 1.03em;
+    }
+
+  }
+
+
+
+
+  .record-body {
+    position: relative;
+    background-color: $nonary-color;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      box-shadow: inset 0 90px 50px -50px $quinary-color;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    &.scrolled:after {
+      opacity: 1;
+    }
+
+
+
+    .log-wrapper {
+      max-height: 382px;
+      padding: 10px 15px 0 5px;
+      overflow: auto;
+
+
+      &::-webkit-scrollbar {
+        width: 7px;
+        background-color: $quinary-color;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: $quinary-color;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: $secondary-color;
+        -webkit-transition: background 1s;
+      }
+
+
+      .log-scroll-cover {
+        height: calc(100% - 80px);
+        width: 10px;
+        background-color: $quinary-color;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+    }
+
+
+    .log-header {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 3px 10px;
+      color: $quinary-color;
+      font-size: 0.715em;
+      border-radius: $secondary-radius;
+    }
+
+    .log-body {
+
+      .note {
+        font-size: 0.88em;
+        line-height: 17px;
+        margin-bottom: 10px;
+      }
+
+    }
+
+
+    .record-footer {
+      margin: 15px 0;
+      padding: 0 5px;
+
+      .note-input {
+        width: 100%;
+        min-height: 65px;
+        border: none;
+        padding: 15px;
+        background: $senary-color;
+        border-radius: $secondary-radius;
+        font-size: 0.85em;
+      }
+
+    }
+
+  }
+
+}
+
+
+
+.active-record {
+  border-bottom: 1px solid $secondary-support-color;
+}
+
+
+
+.active-line-color-01 {
+  border-bottom: 1px solid $primary-line-highlight;
+}
+
+
+
+.active-line-color-02 {
+  border-bottom: 1px solid $secondary-line-highlight;
+}
+
+
+
+.active-line-color-03 {
+  border-bottom: 1px solid $tertiary-line-highlight;
+}
+
+
+
+.active-line-color-04 {
+  border-bottom: 1px solid $quaternary-line-highlight;
+}
+
+
+
+.active-line-color-05 {
+  border-bottom: 1px solid $quinary-line-highlight;
+}
+
+
+
+.active-line-color-06 {
+  border-bottom: 1px solid $senary-line-highlight;
+}
+
+
+
+.active-line-color-07 {
+  border-bottom: 1px solid $septenary-line-highlight;
+}
+
+
+
+.active-line-color-08 {
+  border-bottom: 1px solid $octonary-line-highlight;
+}
+
+
+
+.active-line-color-09 {
+  border-bottom: 1px solid $nonary-line-highlight;
+}
+
+
+
+.active-line-color-10 {
+  border-bottom: 1px solid $denary-line-highlight;
+}
+
+
+
+.primary-highlight {
+  background-color: $primary-highlight;
+}
+
+
+
+.secondary-highlight {
+  background-color: $secondary-highlight;
+}
+
+
+
+.tertiary-highlight {
+  background-color: $tertiary-highlight;
+}
+
+
+
+.quaternary-highlight {
+  background-color: $quaternary-highlight;
+}
+
+
+
+.quinary-highlight {
+  background-color: $quinary-highlight;
+}
+
+
+
+.senary-highlight {
+  background-color: $senary-highlight;
+}
+
+
+
+.septenary-highlight {
+  background-color: $septenary-highlight;
+}
+
+
+
+.octonary-highlight {
+  background-color: $octonary-highlight;
+}
+
+
+
+.nonary-highlight {
+  background-color: $nonary-highlight;
+}
+
+
+
+.denary-highlight {
+  background-color: $denary-highlight;
+}
+
+
+
+.record-options {
+  width: 60px;
+  height: 80px;
+  top: 80px;
+  position: absolute;
+  background-color: $primary-color;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  z-index: 1;
+
+  .record-option-segment {
+    height: 50%;
+    cursor: pointer;
+  }
+
+}
+
+
+
+#edit-record-btn {
+  border-top-right-radius: 8px;
+  background: url("../img/icons/edit-icon.svg") no-repeat 75% 50%;
+
+  &:hover {
+    background-color: $tertiary-support-color;
+  }
+
+}
+
+
+
+#delete-record-btn {
+  background: url("../img/icons/delete-icon.svg") no-repeat 70% 50%;
+  border-bottom-right-radius: 8px;
+
+  &:hover {
+    background-color: $tertiary-support-color;
+  }
+}
+
+
+
+@media screen and ( max-width: 480px ) {
+
+  .record-options {
+    top: 110px;
+  }
+
+}

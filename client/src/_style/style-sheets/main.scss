@@ -1,0 +1,115 @@
+
+@import "style-fonts";
+@import "color-variables";
+@import "mixins";
+
+
+
+
+$primary-radius: 10px;
+$secondary-radius: 5px;
+
+
+
+html, body {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  background-color: $secondary-color;
+  color: $text-primary-color;
+}
+
+
+
+.checkbox-input {
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+  color: $text-tertiary-color;
+  font-size: 0.85em;
+  text-transform: none;
+
+  &:before {
+    content: "";
+    top: -2px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    border: 1px solid $tertiary-color;
+  }
+}
+
+
+
+label, input {
+  display: block;
+  width: 100%;
+  font-size: 0.85em;
+}
+
+
+
+label {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: $text-quaternary-color;
+}
+
+
+
+input:not([type='checkbox']) {
+  border: 1px solid $tertiary-color;
+  padding: 18px 20px;
+  height: 50px
+}
+
+
+
+input.invalid {
+  border-bottom: 1px solid $quaternary-accent;
+}
+
+
+
+.button-primary, .button-secondary {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+
+
+
+.button-primary {
+  border-radius: $primary-radius;
+  color: $octonary-color;
+  @include drop-shadow( $shadow-primary-color, 15px, 20px, 0, -15px );
+  @include gradient( $primary-color, $primary-support-color );
+}
+
+
+
+.button-secondary {
+  color: $septenary-color;
+  background: transparent;
+}
+
+
+span {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
