@@ -1,0 +1,61 @@
+
+version: "3.1"
+
+services:
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.prod
+    depends_on:
+      - api
+    restart: always
+    ports:
+      - "80:80"
+      - "4200:4200"
+      - "4300:4300"
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+  api:
+    build:
+          context: ./api
+          dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    restart: always
+
+  mongo:
+    image: mongo
+    ports:
+      - "2717:2717"
+
+  subscribe:
+    build:
+      context: ./subscriptions
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    restart: always
+    ports:
+      - "4000:4000"
+    command: ["./wait-for-it.sh", "postgres:5432", "--", "npm", "start"]
+
+  postgres:
+    image: postgres:9.6.8-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: scrumbs-subscribers
+    ports:
+      - "5432:5432"
