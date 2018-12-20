@@ -5,3 +5,4 @@ api/dist
 subscriptions/node_modules
 subscriptions/ormconfig.json
 **/*.env
+data/

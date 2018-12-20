@@ -1,0 +1,50 @@
+
+version: "3.1"
+
+services:
+
+  api:
+    build:
+          context: ./api
+          dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    restart: always
+
+  mongo:
+    image: mongo
+    ports:
+      - "2717:2717"
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    depends_on:
+      - api
+    restart: always
+    ports:
+      - "80:80"
+      - "4200:4200"
+      - "4300:4300"
+
+  subscribe:
+    build:
+      context: ./subscriptions
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    restart: always
+    ports:
+      - "4000:4000"
+    command: ["./wait-for-it.sh", "postgres:5432", "--", "npm", "start"]
+
+  postgres:
+    image: postgres:9.6.8-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: scrumbs-subscribers
+    ports:
+      - "5432:5432"
