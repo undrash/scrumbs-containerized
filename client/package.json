@@ -5,12 +5,8 @@
   "repository": "https://github.com/gasparandr/scrumbs-client.git",
   "main": "main.js",
   "scripts": {
-    "build": {
-      "appId": "com.scrumbs.app",
-      "productName": "Scrumbs"
-    },
-    "bld": "webpack-cli",
-    "bld-dev": "webpack-cli --config webpack.config.dev.js",
+    "build": "webpack-cli && gulp",
+    "build-dev": "webpack-cli --config webpack.config.dev.js && gulp",
     "watch": "webpack --watch",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "start": "npm run b && tsc && electron ./_desktop/js/main.js",

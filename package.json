@@ -1,0 +1,7 @@
+{
+  "name": "scrumbs-containerized",
+  "scripts": {
+    "start:development": "docker-compose -f docker-compose.dev.yml down && npm run build --prefix api/ && npm run build-dev --prefix client/ && npm run build-dev --prefix website/ && docker-compose -f docker-compose.dev.yml build && docker-compose -f docker-compose.dev.yml up",
+    "start:production": "webpack-cli --config webpack.config.dev.js"
+  }
+}

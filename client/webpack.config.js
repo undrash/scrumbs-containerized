@@ -2,6 +2,9 @@
 const path      = require("path");
 const webpack   = require('webpack');
 
+
+
+
 module.exports = {
     entry: "./src/EntryPoint",
     mode: "development",
@@ -28,7 +31,7 @@ module.exports = {
     },
     output: {
         filename: "output.js",
-        path: path.resolve(__dirname, "../nginx/scrumbs-client")
+        path: path.resolve(__dirname, "dist")
     },
     externals: [
         { "pixi.js": "PIXI" },

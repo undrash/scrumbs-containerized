@@ -28,7 +28,7 @@ module.exports = {
     },
     output: {
         filename: "output.js",
-        path: path.resolve(__dirname, "../nginx/scrumbs-client")
+        path: path.resolve(__dirname, "dist")
     },
     externals: [
         { "pixi.js": "PIXI" },
