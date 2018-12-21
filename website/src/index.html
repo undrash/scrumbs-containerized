@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Scrumbs Landing Page</title>
+    <link rel="stylesheet" href="resources/css/style-reset.css">
+    <link rel="stylesheet" href="resources/css/scrumbs-stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+
+    <div id="navbar">
+
+        <div id="scrumbs-logo">
+            <img class="navbar-logo" src="resources/images/scrumbs-logo-colored.svg"/>
+        </div>
+
+        <div id="downloads-btn">
+
+            <a class="navbar-button-style">Download</a>
+
+        </div>
+
+
+        <div id="authentication-container">
+
+            <div id="sign-in-btn">
+
+            <a class="navbar-button-style">Sign-In</a>
+
+            </div>
+
+            <a href=<%= JSON.stringify(htmlWebpackPlugin.options.app_url) %>>
+                <div id="get-started-btn-navbar" class="primary-button">Get Started for free</div>
+            </a>
+
+
+        </div>
+
+
+        <div id="navbar-menu-btn">
+
+            <img class="hamburger-icon" src="resources/images/menu-icon.svg">
+
+        </div>
+
+    </div>
+
+
+    <div id="above-the-fold" class="clear">
+
+        <div class="left-container">
+
+            <div class="main-title">Tracking your daily scrum meetings has never been easier.</div>
+            <div class="primary-text">Scrumbs is a lightweight agile management tool, designed to make the scrum masters life easier. Keep logs of the daily scrum meetings, know what your team is up to, manage blockers, and generate reports. It has never been easier, and we don't charge you a dime.</div>
+            <div id="get-started-btn-above-the-fold" class="primary-button">Get Started for free</div>
+            <div id="sign-in-option" class="secondary-text">Already have an account? <a class="link">Sign In.</a></div>
+
+        </div>
+
+        <div class="right-container cover-image"></div>
+
+    </div>
+
+
+    <div id="features">
+
+        <div id="logs-feature-card" class="feature-card ">
+
+            <img class="feature-card-icon" src="resources/images/logs-icon.svg">
+
+            <div class="secondary-title">Logs</div>
+            <div class="secondary-text card-description">Keep logs of your daily stand-up meetings. Easily track what each person in your team has been up to.</div>
+
+        </div>
+
+        <div id="blockers-feature-card" class="feature-card">
+
+            <img class="feature-card-icon" src="resources/images/blocker-icon.svg">
+
+            <div class="secondary-title">Blockers</div>
+            <div class="secondary-text card-description">Create and manage blockers. Keep an eye on what is slowing the development process.</div>
+
+        </div>
+
+
+        <div id="integrations-feature-card" class="feature-card">
+
+            <img class="feature-card-icon" src="resources/images/integrations-icon.svg">
+
+            <div class="secondary-title">Integrations</div>
+            <div class="secondary-text card-description">Scrumbs works with agile tools you already use. Forward your data without ever leaving the app.</div>
+
+        </div>
+
+        <div id="reports-feature-card" class="feature-card">
+
+            <img class="feature-card-icon" src="resources/images/reports-icon.svg">
+
+            <div class="secondary-title">Reports</div>
+            <div class="secondary-text card-description">Generate reports of logs and blockers in the system, make better decisions based on your data.</div>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="section-1">
+
+        <div class="left-container left-ui"></div>
+
+        <div class="right-container right-description">
+
+            <div class="main-title">Aiming for the best experience.</div>
+            <div class="primary-text">Scrumbs was designed to provide the best possible experience through simplicity and style. Our main objective was to make something that not just looks good, but feels great to use.</div>
+
+        </div>
+
+    </div>
+
+
+    <div id="section-2">
+
+        <div class="left-container left-description">
+
+            <div class="main-title">Aiming for the best experience.</div>
+            <div class="primary-text">Scrumbs was designed to provide the best possible experience through simplicity and style. Our main objective was to make something that not just looks good, but feels great to use.</div>
+
+            <div class="download-btn-container">
+
+                <div class="download-btn">
+                    <img class="btn-logo" src="resources/images/windows-logo.svg">
+                    <div class="secondary-btn-label">Download Now</div>
+                </div>
+
+                <div class="download-btn">
+                    <img class="btn-logo" src="resources/images/mac-logo.svg">
+                    <div class="secondary-btn-label">Download Now</div>
+                </div>
+
+                <div class="download-btn">
+                    <img class="btn-logo" src="resources/images/ios-logo.svg">
+                    <div class="secondary-btn-label">Download Now</div>
+                </div>
+
+                <div class="download-btn-disabled ">
+                    <img class="btn-logo" src="resources/images/android-logo.png">
+                    <div class="secondary-btn-label">Coming soon</div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="right-container right-ui"></div>
+
+    </div>
+
+
+    <div id="footer">
+
+        <div class="top-footer">
+
+            <div class="footer-logo">
+
+                <img src="resources/images/scrumbs-logo-white.svg">
+
+            </div>
+
+            <div id="footer-description" class="main-title">Tracking your daily scrum meetings easier.</div>
+
+            <div class="secondary-btn">
+                <div class="secondary-btn-label">Get started</div>
+            </div>
+
+            <div class="info-text">No credit card required.</div>
+
+        </div>
+
+        <div class="bottom-footer">
+
+            <ul class="footer-navigation">
+                <li><a>Privacy & Terms</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+
+            <div class="source-company">
+                <div class="source-label">Powered by</div>
+                <img class="planeeet-logo" src="resources/images/planeeet-logo.svg">
+            </div>
+
+            <div class="social-media-buttons-container">
+
+                <div class="social-btn linked-in-btn"></div>
+                <div class="social-btn twitter-btn"></div>
+                <div class="social-btn facebook-btn"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

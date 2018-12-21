@@ -9,7 +9,8 @@
       "appId": "com.scrumbs.app",
       "productName": "Scrumbs"
     },
-    "b": "webpack-cli",
+    "bld": "webpack-cli",
+    "bld-dev": "webpack-cli --config webpack.config.dev.js",
     "watch": "webpack --watch",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "start": "npm run b && tsc && electron ./_desktop/js/main.js",

@@ -9,14 +9,14 @@ import {Proxy} from "../core/Proxy";
 import {UserVO} from "./UserVO";
 
 
-
+declare const SERVICE_URL: string;
 
 
 
 export class ConnectionProxy extends Proxy {
 
     constructor(proxyName: string) {
-        super( proxyName, "http://192.168.99.100:4200/api/v1" );
+        super( proxyName, SERVICE_URL );
     }
 
 

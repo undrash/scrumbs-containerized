@@ -37,7 +37,7 @@ module.exports = {
     ],
     plugins: [
         new webpack.DefinePlugin({
-            "SERVICE_URL": JSON.stringify("https://app.scrumbs.app/api/v1")
+            "SERVICE_URL": JSON.stringify("http://192.168.99.100:4200/api/v1")
         })
     ]
 

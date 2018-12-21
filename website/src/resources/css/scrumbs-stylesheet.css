@@ -1,0 +1,615 @@
+/* navbar style goes here*/
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 500;
+    color: #636185;
+}
+
+body {
+    background: linear-gradient(0deg, #F6F6F9 0%, #FFFFFF 100%);
+}
+
+a {
+    cursor: pointer;
+}
+
+.primary-button {
+    padding: 20px;
+    background: linear-gradient(90deg, #6CB7FF 0%, #7985FF 100%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    box-shadow: 0 15px 9px -10px rgba(121,133,255,0.5);
+    transition: all .2s ease-in-out;
+    display: inline-block;
+}
+
+.primary-button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background: linear-gradient(90deg, #6E7BFF 0%, #6E7BFF 100%);
+    box-shadow: 0 15px 15px -10px rgba(121,133,255,0.5);
+}
+
+.navbar-button-style {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 40px;
+    display: inline-block;
+    line-height: 110px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar-button-style:hover {
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+}
+
+.main-title {
+    color: #242246;
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 50px;
+}
+
+.secondary-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #242246;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.primary-text {
+    font-size: 18px;
+    line-height: 33px;
+    margin-top: 30px;
+}
+
+.secondary-text {
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.link {
+    color: #7985FF;
+    text-decoration: underline;
+}
+
+#navbar {
+    background-color: #ffffff;
+    width: 100%;
+    height: 110px;
+}
+
+#scrumbs-logo {
+    width: 160px;
+    margin: 25px 0 30px 30px;
+    float: left;
+    display: inline-block;
+}
+
+.navbar-logo {
+    width: 160px;
+}
+
+#downloads-btn {
+    display: inline-block;
+}
+
+#sign-in-btn {
+    display: inline-block;
+}
+
+#authentication-container {
+    width: 380px;
+    height: 110px;
+    display: inline-block;
+    float: right;
+}
+
+#get-started-btn-navbar {
+    float: right;
+    margin-right: 33px;
+    margin-top: 28px;
+}
+
+.hamburger-icon {
+    position: absolute;
+    top: 43px;
+    right: 30px;
+    display: none;
+    width: 25px;
+}
+
+#above-the-fold {
+    /*background-color: #ff9555;*/
+    margin: auto;
+    height: auto;
+    padding-top: 135px;
+    padding-left: 60px;
+    overflow: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#get-started-btn-above-the-fold {
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.left-container {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    /*background-color: #ffffff;*/
+    float: left;
+    box-sizing: border-box;
+}
+
+#sign-in-option {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.right-container {
+    width: 50%;
+    height: autopx;
+    display: inline-block;
+    /*background-color: #626262;*/
+    float: right;
+}
+
+.cover-image {
+    background: url("../images/illustration.png") no-repeat top left;
+    position: absolute;
+    transform: translateY(-130px);
+    height: 600px;
+}
+
+
+
+#features {
+    max-width: 1366px;
+    margin: auto;
+    height: auto;
+    padding: 140px 60px 190px 60px;
+    /*background-color: #636185;*/
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.feature-card {
+    width: 23%;
+    height: 350px;
+    background-color: #ffffff;
+    float: left;
+    margin: 0 1%;
+    padding-top: 50px;
+    border-radius: 5px;
+}
+
+.feature-card-icon {
+    display: block;
+    margin: 0 auto 50px auto;
+}
+
+.card-description {
+    width: 80%;
+    margin: auto;
+}
+
+.description-background {
+    width: 100%;
+    background-color: grey;
+}
+
+#section-1 {
+    /*background-color: #3385ff;*/
+    width: 100%;
+    height: 730px;
+    overflow: auto;
+    margin: auto;
+}
+
+.left-ui {
+    background: url("../images/left-ui.svg") no-repeat right;
+    height: 650px;
+}
+
+.right-description {
+    padding: 90px 60px 0 40px;
+    box-sizing: border-box;
+    max-width: 50%;
+    float: left;
+}
+
+#section-2 {
+    /*background-color: #326ad4;*/
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.left-description {
+    padding-top: 90px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    /*background-color: #ffff99;*/
+}
+
+.download-btn-container {
+    margin-top: 50px;
+}
+
+.download-btn {
+    width: 235px;
+    padding: 20px 0;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 15px 9px -10px rgba(121,133,255,0.2);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.download-btn:hover {
+    outline: 2px solid #7985FF;
+    cursor: pointer;
+}
+
+.download-btn-disabled {
+    width: 235px;
+    padding: 20px 0;
+    background-color: #EAEBF1;
+    text-transform: uppercase;
+    text-align: center;
+    color: #636185;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-logo {
+    margin-bottom: 5px;
+}
+
+.right-ui {
+    background: url("../images/right-ui.svg") no-repeat left;
+    height: 840px;
+}
+
+#footer {
+    /*background-color: #24cde0;*/
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    display: inline-block;
+
+}
+
+.top-footer {
+    padding: 130px 0;
+    background: linear-gradient(90deg, #6CB7FF 0%, #7985FF 100%);
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 45px;
+}
+
+#footer-description {
+    margin: 0 auto 50px auto;
+    width: 520px;
+    color: #ffffff;
+}
+
+.secondary-btn {
+    /*width: 235px;*/
+    padding: 20px 30px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 15px 9px -10px rgba(121,133,255,0.5);
+    font-size: 14px;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    color: #636185;
+    transition: all .2s ease-in-out;
+}
+
+.secondary-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.info-text {
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.7;
+    color: #ffffff;
+}
+
+.footer-description {
+    color: #ffffff;
+}
+
+.bottom-footer {
+    height: 120px;
+    line-height: 120px;
+    padding: 0 120px;
+    text-align: center;
+    color: #9B9AA9;
+    font-size: 14px;
+}
+
+.footer-navigation {
+    display: inline-block;
+    text-decoration: none;
+    float: left;
+
+}
+
+.source-company {
+    display: inline-block;
+    position: relative;
+    left: -100px;
+}
+
+.source-label {
+    display: inline-block;
+    margin-right: 15px;
+    opacity: 0.7;
+}
+
+.social-media-buttons-container {
+    display: inline-block;
+    float: right;
+}
+
+.social-media-buttons-container img {
+    margin-left: 50px;
+}
+
+li {
+    display: inline-block;
+    margin-right: 50px;
+    opacity: 0.7;
+    transition: all .2s ease-in-out;
+}
+
+li:hover {
+    opacity: 1;
+}
+
+.planeeet-logo {
+    position: absolute;
+    top: 48px;
+    left: 100px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #636185;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.linked-in-btn {
+    transition: all .2s ease-in-out;
+    background: url("../images/linked-in.svg") center no-repeat;
+}
+
+.linked-in-btn:hover {
+    background: url("../images/linked-in-colored.svg") center no-repeat;
+    cursor: pointer;
+}
+
+.twitter-btn {
+    transition: all .2s ease-in-out;
+     background: url("../images/twitter.svg") center no-repeat;
+ }
+
+.twitter-btn:hover {
+    background: url("../images/twitter-colored.svg") center no-repeat;
+    cursor: pointer;
+}
+
+.facebook-btn {
+    transition: background-color .2s ease-in-out;
+    background: url("../images/facebook.svg") center no-repeat;
+}
+
+.facebook-btn:hover {
+    background: url("../images/facebook-colored.svg") center no-repeat;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+
+    .hamburger-icon {
+        display: inline-block;
+    }
+
+    #authentication-container {
+        display: none;
+    }
+
+    #downloads-btn {
+        display: none;
+    }
+
+    #sign-in-option {
+        text-align: center;
+    }
+
+    /*.main-title {*/
+        /*font-size: 31px;*/
+        /*line-height: 40px;*/
+    /*}*/
+
+    /*.primary-text {*/
+        /*margin-top: 20px;*/
+        /*font-size: 15px;*/
+        /*line-height: 30px;*/
+    /*}*/
+
+    #above-the-fold {
+        padding-left: 0;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .left-container {
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    .right-container {
+        width: 100%;
+        position: relative;
+        transform: translateY(0);
+    }
+
+    .cover-image {
+        background: url("../images/illustration.png") no-repeat top center;
+        margin-top: 70px;
+        background-size: 700px;
+        height: 440px;
+    }
+
+    #features {
+        padding: 60px 40px 100px 40px;
+    }
+
+    .feature-card {
+        width: 100%;
+        /*margin-bottom: 20px;*/
+        margin: 0 0 20px 0;
+    }
+
+    #section-1 {
+        /*height: auto;*/
+        text-align: center;
+        position: relative;
+        height: 860px;
+    }
+
+    .left-ui {
+        background: url("../images/left-ui.svg") no-repeat center;
+        background-size: 700px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .right-description {
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    #section-2 {
+        text-align: center;
+    }
+
+    .right-ui {
+        background: url("../images/right-ui.svg") no-repeat center;
+        background-size: 700px;
+    }
+
+    .bottom-footer {
+        height: 200px;
+        position: relative;
+        line-height: normal;
+        margin-top: 40px;
+    }
+
+    .footer-navigation {
+        float: none;
+        display: block;
+    }
+
+    li {
+        margin: 0 30px;
+    }
+
+    .social-media-buttons-container {
+        float: none;
+    }
+
+    .source-company {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+    }
+
+    .planeeet-logo {
+        position: initial;
+        margin: -10px;
+    }
+
+}
+
+@media only screen and (min-width: 1366px) {
+
+    #above-the-fold {
+        /*background-color: #ff9555;*/
+        max-width: 1366px;
+        padding-left: 0;
+    }
+
+    #section-1 {
+        max-width: 1366px;
+        /*background-color: #ffff99;*/
+    }
+
+    .left-ui {
+        position: absolute;
+        background: url("../images/left-ui.svg") no-repeat left;
+    }
+
+    .right-description {
+        float: right;
+        padding-left: 150px;
+        padding-right: 0;
+    }
+
+    #section-2 {
+        max-width: 1366px;
+        margin: auto;
+        height: 875px;
+        /*background-color: #d3c774;*/
+    }
+
+    .right-ui {
+        position: absolute;
+    }
+}
+

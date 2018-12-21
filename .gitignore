@@ -4,5 +4,8 @@ api/node_modules
 api/dist
 subscriptions/node_modules
 subscriptions/ormconfig.json
+website/node_modules
+nginx/scrumbs-client
+nginx/scrumbs-website
 **/*.env
 data/
