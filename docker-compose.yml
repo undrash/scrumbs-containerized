@@ -37,9 +37,12 @@ services:
     image: mongo
     expose:
       - "2717"
+    volumes:
+      - /docker-volumes/data/mongo:/data/db
     networks:
       - scrumbs
 
+    
   subscribe:
     build:
       context: ./subscriptions
@@ -60,6 +63,8 @@ services:
       POSTGRES_DB: scrumbs-subscribers
     expose:
       - "5432"
+    volumes:
+      - /docker-volumes/data/postgres:/var/lib/postgresql
     networks:
       - scrumbs
       
