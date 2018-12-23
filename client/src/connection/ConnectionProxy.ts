@@ -63,8 +63,14 @@ export class ConnectionProxy extends Proxy {
             data,
             (response: any) => {
 
-                Proxy.token = response.token;
+                Proxy.token = response.tokenData.token;
+                Proxy.tokenExpires = new Date( response.tokenData.expires );
 
+                const { user, email, firstName, lastName } = response.userData;
+
+                const userVO = new UserVO( user, email, firstName, lastName );
+
+                this.setVO( userVO );
 
                 success( response );
             },

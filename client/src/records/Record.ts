@@ -169,9 +169,12 @@ export class Record {
 
                 p.addNote(
                     addNoteModel,
-                    (log: any) => {
+                    (response: any) => {
 
-                    console.log( "Log id received from server" + log );
+                    const log = response.log;
+
+                    console.log( "Log id received from server" );
+                    console.log( log );
 
 
                     const logElement = document.getElementById( log._id );
