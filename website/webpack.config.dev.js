@@ -27,6 +27,21 @@ module.exports = {
         path: path.resolve( __dirname, "../nginx/scrumbs-website" )
     },
 
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env"]
+                    }
+                }
+            }
+        ]
+    },
+
     plugins:
         Object.keys( titles ).map( function( id ) {
 
@@ -42,7 +57,7 @@ module.exports = {
         }).concat([
 
             new webpack.DefinePlugin({
-                "SERVICE_URL": JSON.stringify( "http://192.168.99.100:4000" )
+                "SERVICE_URL": JSON.stringify( "http://192.168.99.100:4300/graphql" )
             })
 
         ]).concat([

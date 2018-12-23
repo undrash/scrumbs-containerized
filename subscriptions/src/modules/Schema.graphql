@@ -11,6 +11,6 @@ type Subscriber {
 type Query {
     getSubscribers(pass: String!): [Subscriber!]!,
     unSubscribe(id: String!): String
-    subscribe(name: String!, email: String!): Boolean
+    subscribe(name: String!, email: String!): String
 }
 

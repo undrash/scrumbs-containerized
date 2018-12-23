@@ -30,11 +30,6 @@ const schema = makeExecutableSchema({
 });
 
 
-// server.use( "/graphql", (req: Request, res: Response) => {
-//     return graphqlHTTP( { schema, context: { req, res } } )(req, res);
-// } );
-
-
 server.use('/graphql', (req: Request, res: Response) => {
 
     return graphqlHTTP({

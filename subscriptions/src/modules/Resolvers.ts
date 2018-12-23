@@ -44,7 +44,7 @@ export const resolvers = {
             const mailOptions = {
                 to: email,
                 subject: "Scrumbs - subscribed successfully!",
-                text: `Hi ${ name },\n\nThanks for subscribing to the alpha release!\n\n\nUnsubscribe: ${ context.req.headers.host }/graphql?query={unSubscribe(id:"${ subscriber.id }")}`
+                text: `Hi ${ name },\n\nThanks for subscribing to the alpha release!\n\n\nUnsubscribe: http://${ context.req.headers.host }/graphql?query={unSubscribe(id:"${ subscriber.id }")}`
             };
 
             await smtpTransport.sendMail( mailOptions, (err: any) => {
@@ -66,7 +66,7 @@ export const resolvers = {
 
             });
 
-            return true;
+            return JSON.stringify( { success: true, message: `Successfully subscribed with email: ${ email }` } );
         }
 
     }
