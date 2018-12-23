@@ -14,7 +14,9 @@
     "app/**/*"
   ],
   "files": [
-    "./typings/index.d.ts",
-    "./node_modules/electron/electron.d.ts"
+    "./typings/index.d.ts"
+  ],
+  "types": [
+    "webpack-env"
   ]
 }

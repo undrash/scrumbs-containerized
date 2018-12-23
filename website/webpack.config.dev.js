@@ -57,7 +57,7 @@ module.exports = {
         }).concat([
 
             new webpack.DefinePlugin({
-                "SERVICE_URL": JSON.stringify( "http://192.168.99.100:4300/graphql" )
+                "SERVICE_URL": JSON.stringify( "http://192.168.99.100:4300/http" )
             })
 
         ]).concat([

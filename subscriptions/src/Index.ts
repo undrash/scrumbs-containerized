@@ -5,6 +5,7 @@ import "reflect-metadata";
 
 require( "dotenv" ).config();
 
+import SubscriptionController from "./controllers/SubscriptionController";
 import { makeExecutableSchema } from "graphql-tools";
 import { resolvers } from "./modules/Resolvers";
 import * as graphqlHTTP  from "express-graphql";
@@ -12,8 +13,8 @@ import { importSchema } from "graphql-import";
 import { GraphQLServer } from "graphql-yoga";
 import { createConnection } from "typeorm";
 import * as path from "path";
-
-
+import * as bodyParser from "body-parser";
+import * as cors from "cors";
 
 
 
@@ -22,6 +23,8 @@ const typeDefs = importSchema( path.join( __dirname, "./modules/Schema.graphql" 
 
 
 const server = new GraphQLServer( { typeDefs, resolvers } );
+server.use( bodyParser.json() );
+server.use( cors() );
 
 
 const schema = makeExecutableSchema({
@@ -30,6 +33,7 @@ const schema = makeExecutableSchema({
 });
 
 
+/** GRAPHQL ENDPOINT */
 server.use('/graphql', (req: Request, res: Response) => {
 
     return graphqlHTTP({
@@ -37,6 +41,10 @@ server.use('/graphql', (req: Request, res: Response) => {
         context: {req, res},
     })(req, res);
 });
+
+
+/** HTTP ENDPOINT */
+server.use( "/http", SubscriptionController );
 
 
 createConnection().then( () => {

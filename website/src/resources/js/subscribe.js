@@ -1,37 +1,43 @@
 
-const { createApolloFetch } = require( "apollo-fetch" );
-
-
-const fetch = createApolloFetch({
-    uri: SERVICE_URL,
-});
-
 
 const nameInput     = document.getElementById( "subscriber-name" );
 const emailInput    = document.getElementById( "subscriber-email" );
 const subscribeBtn  = document.getElementById( "submit-button" );
 
 
+let blocked = false;
+
+
 subscribeBtn.addEventListener( "click", () => {
+
+    if ( blocked ) return;
+    blocked = true;
 
     const name      = nameInput.value;
     const email     = emailInput.value;
 
-    if ( validateName( name ) && validateEmail( email ) ) {
+    console.log( "CLICK REGISTERED!" );
 
-        fetch({
-            query: `{ subscribe(name: "${ name }", email: "${ email }") }`
-        }).then(res => {
+    if ( validateName( name ) && validateEmail( email ) && ! blocked ) {
 
-            const response = JSON.parse( res.data.subscribe );
 
-            if ( response.success ) {
-                console.log( response );
-            } else {
-                console.warn( response.message );
+
+        httpRequest(
+            "POST",
+            "/subscribe",
+            {
+                name,
+                email
+            },
+            (response) => {
+
+                console.info( "Request success" );
+            },
+            (message) => {
+
+                console.warn( message );
             }
-
-        });
+        );
 
     } else {
         alert( "Please provide a valid name and email address" );
@@ -54,6 +60,39 @@ function validateName(name) {
 
 
 
+function httpRequest(method, endpoint, data, success, failure) {
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.open( method, SERVICE_URL + endpoint, true );
+    xhr.setRequestHeader('Content-type', 'application/json');
+    xhr.setRequestHeader('Accept', 'application/json');
+
+
+    xhr.onload = () => {
+
+        console.log( xhr.responseText );
+
+        let response = JSON.parse( xhr.responseText );
+
+        if ( response.success ) {
+
+            if ( success ) success( response );
+
+        } else {
+
+            if ( failure ) failure( response.message );
+        }
+    };
+
+    if ( data ) {
+        xhr.send( JSON.stringify( data ) );
+    } else {
+        xhr.send();
+    }
+
+    return xhr;
+}
 
 
 
