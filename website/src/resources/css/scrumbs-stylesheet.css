@@ -17,6 +17,18 @@ a {
     cursor: pointer;
 }
 
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+input[type=text],
+input[type=password] {
+    box-sizing : border-box;
+}
+
 .primary-button {
     padding: 20px;
     background: linear-gradient(90deg, #6CB7FF 0%, #7985FF 100%);
@@ -34,9 +46,14 @@ a {
     display: inline-block;
 }
 
+.full-width-primary-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
 .primary-button:hover {
     transform: scale(1.05);
-    cursor: pointer;
     background: linear-gradient(90deg, #6E7BFF 0%, #6E7BFF 100%);
     box-shadow: 0 15px 15px -10px rgba(121,133,255,0.5);
 }
@@ -77,12 +94,14 @@ a {
     font-size: 18px;
     line-height: 33px;
     margin-top: 30px;
+    /*font-weight: 600;*/
 }
 
 .secondary-text {
     font-size: 14px;
     line-height: 28px;
     text-align: center;
+    /*font-weight: 600;*/
 }
 
 .link {
@@ -95,6 +114,8 @@ a {
     width: 100%;
     height: 110px;
 }
+
+
 
 #scrumbs-logo {
     width: 160px;
@@ -418,7 +439,7 @@ li:hover {
     height: 50px;
     background-color: #636185;
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .linked-in-btn {
@@ -451,10 +472,213 @@ li:hover {
     cursor: pointer;
 }
 
+
+/* subscribe page style ------------------------------------------ */
+
+#subscribe-container {
+    height: calc(100vh - 255px);
+    /*background: grey;*/
+}
+
+#subscribe-inner-container {
+    max-width: 1366px;
+    margin: auto;
+    /*background-color: #6E7BFF;*/
+}
+
+.subscribe-headline-container {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+}
+
+.subscribe-description {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.subscribe-form-container {
+    background: url("../images/bg-shape.svg") center no-repeat;
+    height: 642px;
+}
+
+.subscribe-card-bg {
+    width: 875px;
+    /*height: 560px;*/
+    height: auto;
+    background-color: #ffffff;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 9px 15px 0px rgba(186,192,207,0.30);
+    -moz-box-shadow: 0px 9px 15px 0px rgba(186,192,207,0.30);
+    box-shadow: 0px 9px 15px 0px rgba(186,192,207,0.30);
+    transform: translateY(25px);
+    /*padding: 70px 0 70px 0;*/
+    box-sizing: border-box;
+    padding: 70px 30px 70px 30px;
+}
+
+.subscribe-for-alpha {
+    max-width: 425px;
+    height: auto;
+    /*background-color: #EAEBF1;*/
+    margin: auto;
+}
+
+.input-container {
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 100%;
+}
+
+.input-basic-style-icon {
+    height: 60px;
+    border: 1px solid #E1E0E9;
+    border-radius: 5px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #242246;
+    width: 100%;
+}
+
+.input-basic-style-icon:focus {
+    border: 1px solid #7985FF;
+}
+
+#subscriber-name {
+    background: url("../images/user-icon.svg") 22px center no-repeat;
+}
+
+#subscriber-email {
+    background: url("../images/email-icon.svg") 18px center no-repeat;
+}
+
+.subscribe-info {
+    font-size: 12px;
+    color: #9B9AA9;
+    text-align: center;
+    margin: 10px 0 35px 0;
+    display: block;
+    line-height: 22px;
+}
+
+.subscribe-form-button {
+    margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 1366px) {
+
+    #above-the-fold {
+        /*background-color: #ff9555;*/
+        max-width: 1366px;
+        padding-left: 0;
+    }
+
+    #section-1 {
+        max-width: 1366px;
+        /*background-color: #ffff99;*/
+    }
+
+    .left-ui {
+        position: absolute;
+        background: url("../images/left-ui.svg") no-repeat left;
+    }
+
+    .right-description {
+        float: right;
+        padding-left: 150px;
+        padding-right: 0;
+    }
+
+    #section-2 {
+        max-width: 1366px;
+        margin: auto;
+        height: 875px;
+        /*background-color: #d3c774;*/
+    }
+
+    .right-ui {
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+
+    .subscribe-form-container {
+        padding: 0 30px;
+    }
+
+    #subscribe-form-inner-container {
+        width: 100%;
+    }
+
+    .subscribe-headline-container {
+        padding: 0 50px;
+    }
+
+
+    .bottom-footer {
+        height: 200px;
+        position: relative;
+        line-height: normal;
+        margin-top: 40px;
+    }
+
+    .footer-navigation {
+        float: none;
+        display: block;
+    }
+
+    li {
+        margin: 0 30px;
+    }
+
+    .social-media-buttons-container {
+        float: none;
+    }
+
+    .source-company {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+    }
+
+    .planeeet-logo {
+        position: initial;
+        margin: -10px;
+    }
+
+    #subscribe-container {
+        height: auto;
+        /*display: inline-block;*/
+    }
+
+    .subscribe-for-alpha {
+        width: 100%;
+    }
+}
+
+
 @media only screen and (max-width: 750px) {
+
+    #navbar {
+        background-color: #ffffff;
+        width: 100%;
+        padding: 15px 25px;
+        height: auto;
+        overflow: auto;
+    }
+
+    #scrumbs-logo {
+        margin: 0;
+    }
 
     .hamburger-icon {
         display: inline-block;
+        top: 25px
     }
 
     #authentication-container {
@@ -470,14 +694,14 @@ li:hover {
     }
 
     /*.main-title {*/
-        /*font-size: 31px;*/
-        /*line-height: 40px;*/
+    /*font-size: 31px;*/
+    /*line-height: 40px;*/
     /*}*/
 
     /*.primary-text {*/
-        /*margin-top: 20px;*/
-        /*font-size: 15px;*/
-        /*line-height: 30px;*/
+    /*margin-top: 20px;*/
+    /*font-size: 15px;*/
+    /*line-height: 30px;*/
     /*}*/
 
     #above-the-fold {
@@ -543,73 +767,73 @@ li:hover {
         background-size: 700px;
     }
 
-    .bottom-footer {
-        height: 200px;
-        position: relative;
-        line-height: normal;
-        margin-top: 40px;
+    /*.bottom-footer {*/
+    /*height: 200px;*/
+    /*position: relative;*/
+    /*line-height: normal;*/
+    /*margin-top: 40px;*/
+    /*}*/
+
+    /*.footer-navigation {*/
+    /*float: none;*/
+    /*display: block;*/
+    /*}*/
+
+    /*li {*/
+    /*margin: 0 30px;*/
+    /*}*/
+
+    /*.social-media-buttons-container {*/
+    /*float: none;*/
+    /*}*/
+
+    /*.source-company {*/
+    /*position: absolute;*/
+    /*bottom: 30px;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*}*/
+
+    /*.planeeet-logo {*/
+    /*position: initial;*/
+    /*margin: -10px;*/
+    /*}*/
+
+    /*#subscribe-container {*/
+    /*height: auto;*/
+    /*display: inline-block;*/
+    /*}*/
+
+}
+
+@media only screen and (max-width: 650px) {
+
+
+    #subscribe-form-inner-container {
+        width: 100%;
+        /*padding: 70px 30px 0 30px;*/
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .subscribe-card-bg {
+        padding: 30px 15px;
     }
 
-    .footer-navigation {
-        float: none;
-        display: block;
-    }
-
-    li {
-        margin: 0 30px;
-    }
-
-    .social-media-buttons-container {
-        float: none;
-    }
-
-    .source-company {
-        position: absolute;
-        bottom: 30px;
-        left: 0;
-        right: 0;
-    }
-
-    .planeeet-logo {
-        position: initial;
-        margin: -10px;
+    .subscribe-form-container {
+        padding: 0 10px;
     }
 
 }
 
-@media only screen and (min-width: 1366px) {
 
-    #above-the-fold {
-        /*background-color: #ff9555;*/
-        max-width: 1366px;
-        padding-left: 0;
-    }
 
-    #section-1 {
-        max-width: 1366px;
-        /*background-color: #ffff99;*/
-    }
 
-    .left-ui {
-        position: absolute;
-        background: url("../images/left-ui.svg") no-repeat left;
-    }
 
-    .right-description {
-        float: right;
-        padding-left: 150px;
-        padding-right: 0;
-    }
 
-    #section-2 {
-        max-width: 1366px;
-        margin: auto;
-        height: 875px;
-        /*background-color: #d3c774;*/
-    }
 
-    .right-ui {
-        position: absolute;
-    }
-}
+
+
+
 

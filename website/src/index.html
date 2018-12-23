@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Scrumbs Landing Page</title>
+    <title>Scrumbs App</title>
     <link rel="stylesheet" href="resources/css/style-reset.css">
     <link rel="stylesheet" href="resources/css/scrumbs-stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -14,7 +14,7 @@
     <div id="navbar">
 
         <div id="scrumbs-logo">
-            <img class="navbar-logo" src="resources/images/scrumbs-logo-colored.svg"/>
+            <img class="navbar-logo" src="resources/images/scrumbs%20logo-colored.svg">
         </div>
 
         <div id="downloads-btn">
@@ -33,9 +33,10 @@
             </div>
 
             <a href=<%= JSON.stringify(htmlWebpackPlugin.options.app_url) %>>
-                <div id="get-started-btn-navbar" class="primary-button">Get Started for free</div>
-            </a>
 
+                <div id="get-started-btn-navbar" class="primary-button">Get Alpha Access</div>
+
+            </a>
 
         </div>
 
@@ -55,7 +56,13 @@
 
             <div class="main-title">Tracking your daily scrum meetings has never been easier.</div>
             <div class="primary-text">Scrumbs is a lightweight agile management tool, designed to make the scrum masters life easier. Keep logs of the daily scrum meetings, know what your team is up to, manage blockers, and generate reports. It has never been easier, and we don't charge you a dime.</div>
-            <div id="get-started-btn-above-the-fold" class="primary-button">Get Started for free</div>
+
+            <a href=<%= JSON.stringify(htmlWebpackPlugin.options.app_url) %>>
+
+               <div id="get-started-btn-above-the-fold" class="primary-button">Get Alpha Access</div>
+
+            </a>
+
             <div id="sign-in-option" class="secondary-text">Already have an account? <a class="link">Sign In.</a></div>
 
         </div>
@@ -205,6 +212,7 @@
 
     </div>
 
-    <script src="index.js"></script>
+    <script src="resources/js/index.js"></script>
+
 </body>
 </html>
