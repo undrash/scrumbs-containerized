@@ -7,6 +7,8 @@
   
   <br>
   <br>
+  <br>
+  <br>
   
   <p>Scrumbs is a lightweight agile management tool, designed to make the scrum masters life easier. Keep logs of the daily scrum meetings, know what your team is up to, manage blockers, and generate reports. It has never been easier, and we don't charge you a dime.</p>
   
