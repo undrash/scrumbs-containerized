@@ -75,6 +75,8 @@ class SubscriptionController {
 
             });
 
+            res.send( { success: true, message: "You successfully subscribed for Scrumbs alpha access!" } );
+
         }
 
     };
