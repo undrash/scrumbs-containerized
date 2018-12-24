@@ -20,6 +20,6 @@
   <br>
   
   <img width="420px"
-      src="http://192.168.99.100/resources/images/right-ui.svg">
+      src="https://www.scrumbs.app/resources/images/right-ui.svg">
 
 </div>
