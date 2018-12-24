@@ -30,7 +30,7 @@
   
   
   <a href="http://planeeet.com/">
-    <img width="50px"
+    <img width="100px"
       src="http://www.planeeet.com/wp-content/themes/planeeet/frontend/img/logo.svg">
   </a>
 
