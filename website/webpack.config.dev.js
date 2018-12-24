@@ -66,6 +66,11 @@ module.exports = {
                 from: "src/resources",
                 ignore: [ "*.js" ],
                 to: "resources"
+            }]),
+
+            new CopyWebpackPlugin([{
+                from: "src/favicon.ico",
+                to: "./"
             }])
 
         ])
