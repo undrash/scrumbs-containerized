@@ -21,5 +21,18 @@
   
   <img width="420px"
       src="https://www.scrumbs.app/resources/images/right-ui.svg">
+      
+  <br>
+  
+  <h1>License</h1>
+  
+  <p>Copyright (c) Planeeet. All rights reserved.</p>
+  
+  
+  <a href="http://planeeet.com/">
+    <img width="50px"
+      src="http://www.planeeet.com/wp-content/themes/planeeet/frontend/img/logo.svg">
+  </a>
+
 
 </div>
