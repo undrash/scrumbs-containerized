@@ -11,6 +11,34 @@
 </head>
 <body>
 
+    <div id="mobile-menu">
+
+        <div id="mobile-logo">
+            <img class="navbar-logo" src="resources/images/scrumbs%20logo-colored.svg">
+        </div>
+
+        <ul id="mobile-navigation">
+
+            <li class="mobile-menu-item">Contact</li>
+            <li class="mobile-menu-item">Privacy & terms</li>
+            <li class="mobile-menu-item">Downloads</li>
+
+        </ul>
+
+        <a href=<%= JSON.stringify(htmlWebpackPlugin.options.app_url) %>>
+        <!--<a>-->
+            <div id="get-started-btn-mobile" class="primary-button">Get Alpha Access</div>
+
+        </a>
+
+        <div id="close-mobile-menu-btn">
+
+            <img class="close-menu-btn" src="resources/images/close-icon.svg">
+
+        </div>
+
+    </div>
+
     <div id="navbar">
 
         <div id="scrumbs-logo">
@@ -33,7 +61,7 @@
             </div>
 
             <a href=<%= JSON.stringify(htmlWebpackPlugin.options.app_url) %>>
-
+            <!--<a>-->
                 <div id="get-started-btn-navbar" class="primary-button">Get Alpha Access</div>
 
             </a>
@@ -58,7 +86,7 @@
             <div class="primary-text">Scrumbs is a lightweight agile management tool, designed to make the scrum masters life easier. Keep logs of the daily scrum meetings, know what your team is up to, manage blockers, and generate reports. It has never been easier, and we don't charge you a dime.</div>
 
             <a href=<%= JSON.stringify(htmlWebpackPlugin.options.app_url) %>>
-
+            <!--<a>-->
                <div id="get-started-btn-above-the-fold" class="primary-button">Get Alpha Access</div>
 
             </a>
@@ -191,8 +219,8 @@
         <div class="bottom-footer">
 
             <ul class="footer-navigation">
-                <li><a>Privacy & Terms</a></li>
-                <li><a>Contact</a></li>
+                <li class="footer-menu-item"><a>Privacy & Terms</a></li>
+                <li class="footer-menu-item"><a>Contact</a></li>
             </ul>
 
             <div class="source-company">
@@ -211,8 +239,6 @@
         </div>
 
     </div>
-
-    <script src="resources/js/index.js"></script>
 
 </body>
 </html>

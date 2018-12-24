@@ -1,5 +1,4 @@
 
-import {  Request, Response } from "express";
 
 import "reflect-metadata";
 
@@ -10,10 +9,11 @@ import { makeExecutableSchema } from "graphql-tools";
 import { resolvers } from "./modules/Resolvers";
 import * as graphqlHTTP  from "express-graphql";
 import { importSchema } from "graphql-import";
+import {  Request, Response } from "express";
 import { GraphQLServer } from "graphql-yoga";
 import { createConnection } from "typeorm";
-import * as path from "path";
 import * as bodyParser from "body-parser";
+import * as path from "path";
 import * as cors from "cors";
 
 

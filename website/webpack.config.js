@@ -57,7 +57,7 @@ module.exports = {
         }).concat([
 
             new webpack.DefinePlugin({
-                "SERVICE_URL": JSON.stringify( "https://subscribe.scrumbs.app" )
+                "SERVICE_URL": JSON.stringify( "https://subscribe.scrumbs.app/http" )
             })
 
         ]).concat([

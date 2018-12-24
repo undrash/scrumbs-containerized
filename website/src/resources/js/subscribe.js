@@ -2,7 +2,7 @@
 
 const nameInput     = document.getElementById( "subscriber-name" );
 const emailInput    = document.getElementById( "subscriber-email" );
-const subscribeBtn  = document.getElementById( "submit-button" );
+const subscribeBtn  = document.getElementById( "subscribe-button" );
 
 
 let blocked = false;
@@ -18,8 +18,7 @@ subscribeBtn.addEventListener( "click", () => {
 
     console.log( "CLICK REGISTERED!" );
 
-    if ( validateName( name ) && validateEmail( email ) && ! blocked ) {
-
+    if ( validateName( name ) && validateEmail( email ) ) {
 
 
         httpRequest(
@@ -32,10 +31,11 @@ subscribeBtn.addEventListener( "click", () => {
             (response) => {
 
                 console.info( "Request success" );
+                blocked = false;
             },
             (message) => {
-
                 console.warn( message );
+                blocked = false;
             }
         );
 
@@ -65,8 +65,8 @@ function httpRequest(method, endpoint, data, success, failure) {
     let xhr = new XMLHttpRequest();
 
     xhr.open( method, SERVICE_URL + endpoint, true );
-    xhr.setRequestHeader('Content-type', 'application/json');
-    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.setRequestHeader( "Content-type", "application/json");
+    xhr.setRequestHeader( "Accept", "application/json" );
 
 
     xhr.onload = () => {
