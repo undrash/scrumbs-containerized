@@ -508,7 +508,7 @@ transition: all .2s ease-in-out;
 
 #subscribe-container {
     height: calc(100vh - 246px);
-    min-height: 800px;
+    min-height: 860px;
     /*background: grey;*/
 }
 
