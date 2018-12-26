@@ -343,7 +343,6 @@ input[type=password] {
 }
 
 #footer {
-    /*background-color: #24cde0;*/
     width: 100%;
     height: auto;
     color: #ffffff;
@@ -406,6 +405,7 @@ input[type=password] {
     text-align: center;
     color: #9B9AA9;
     font-size: 14px;
+    background-color: #ffffff;
 }
 
 .footer-navigation {
@@ -430,6 +430,7 @@ input[type=password] {
 .social-media-buttons-container {
     display: inline-block;
     float: right;
+    height: 100px;
 }
 
 .social-media-buttons-container img {
@@ -510,6 +511,7 @@ transition: all .2s ease-in-out;
     height: calc(100vh - 246px);
     min-height: 860px;
     /*background: grey;*/
+    /*display: none;*/
 }
 
 #subscribe-inner-container {
@@ -612,6 +614,45 @@ transition: all .2s ease-in-out;
     opacity: 1;
 }
 
+#subscribed-feedback {
+    display: none;
+}
+
+#already-subscribed-feedback {
+    display: none;
+}
+
+.subscription-feedback {
+    max-width: 770px;
+    /*height: auto;*/
+    margin: auto;
+    text-align: center;
+    height: calc(100vh - 246px);
+    min-height: 860px;
+    padding: 200px 60px 0 60px;
+    box-sizing: border-box;
+}
+
+.go-home-button {
+    margin: 40px auto 0 auto;
+    display: block;
+    max-width: 280px;
+}
+
+/*terms ------------------------------------------------------------------------------*/
+
+.terms-container {
+    padding: 40px 50px;
+    max-width: 1000px;
+    background-color: #ffffff;
+    margin: 0 auto 30px auto;
+}
+
+.terms-scrumbs-logo {
+    width: 160px;
+    margin-bottom: 40px;
+}
+
 
 /*mobile menu--------------------------------------------------------------------------*/
 
@@ -647,6 +688,10 @@ transition: all .2s ease-in-out;
 .close-menu-btn {
     width: 25px;
     height: 25px;
+}
+
+.list-item-indent {
+    text-indent: 15px;
 }
 
 
@@ -803,6 +848,10 @@ transition: all .2s ease-in-out;
     .subscribe-for-alpha {
         width: 100%;
     }
+
+    .subscription-title {
+        margin-bottom: 15px;
+    }
 }
 
 
@@ -837,17 +886,6 @@ transition: all .2s ease-in-out;
     #sign-in-option {
         text-align: center;
     }
-
-    /*.main-title {*/
-    /*font-size: 31px;*/
-    /*line-height: 40px;*/
-    /*}*/
-
-    /*.primary-text {*/
-    /*margin-top: 20px;*/
-    /*font-size: 15px;*/
-    /*line-height: 30px;*/
-    /*}*/
 
     #above-the-fold {
         padding-left: 0;
@@ -1012,6 +1050,10 @@ transition: all .2s ease-in-out;
         width: 80%;
     }
 
+    .subscription-feedback {
+        padding: 40px 35px;
+    }
+
 }
 
 
@@ -1083,6 +1125,13 @@ transition: all .2s ease-in-out;
         padding: 0 40px;
     }
 
+    .subscription-feedback {
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        min-height: 300px;
+        height: calc(100vh - 350px);
+    }
+
 
 }
 
@@ -1100,6 +1149,12 @@ transition: all .2s ease-in-out;
 
     .social-btn {
         margin-top: 0;
+    }
+
+    .subscription-feedback {
+        min-height: 250px;
+        height: calc(100vh - 280px);
+        display: inline-block;
     }
 
 }

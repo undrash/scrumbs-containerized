@@ -36,6 +36,10 @@ footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
+ol {
+    list-style-position: inside;
+}
+
 nav ul {
     list-style:none;
 }

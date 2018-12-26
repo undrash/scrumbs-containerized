@@ -11,14 +11,13 @@
 </head>
 <body>
 
-    <div id="subscribe-navbar">
+    <a id="subscribe-navbar" href="index.html">
 
         <div id="subscribe-scrumbs-logo">
             <img class="subscribe-navbar-logo" src="resources/images/scrumbs%20logo-colored.svg">
         </div>
 
-
-    </div>
+    </a>
 
     <div id="subscribe-container">
 
@@ -53,7 +52,7 @@
 
                         </div>
 
-                        <div class="subscribe-info">By clicking "Subscribe" I agree to Scrumbs’ <a class="link">Terms of Service</a>.</div>
+                        <div class="subscribe-info">By clicking "Subscribe" I agree to Scrumbs’ <a class="link" href="terms.html" target="_blank">Terms of Service</a>.</div>
 
                         <input type="button" id="subscribe-button" class="primary-button full-width-primary-button subscribe-form-button" value="Subscribe">
 
@@ -77,9 +76,33 @@
 
     </div>
 
+    <div id="subscribed-feedback" class="subscription-feedback">
+
+        <div class="main-title subscription-title">Thank you for your interest!</div>
+        <div class="secondary-text">You are going to receive a confirmation to your email address in the shortest time possible, and you will be among the first few to get notified of our soft launch.</div>
+        <!--<a id="subscribed-home-button" class="primary-button" href=<%= JSON.stringify(htmlWebpackPlugin.options.app_url) %>>Get Alpha Access</a>-->
+        <a id="subscribed-home-button" class="primary-button go-home-button" href="index.html">Go Home</a>
+
+    </div>
+
+    <div id="already-subscribed-feedback" class="subscription-feedback">
+
+        <div class="main-title subscription-title">The email you is already Subscribed!</div>
+        <div class="secondary-text">You will be amongst the first few to get notified of our soft launch! If you want to check in on the development process, you are welcome to take a peek on
+
+            <!--<a href=<%= JSON.stringify(htmlWebpackPlugin.options.repository) %> target="_blank"><img src="resources/images/github-logo.svg"> -->
+            <a href="https://github.com/gasparandr/scrumbs-containerized" target="_blank"><img src="resources/images/github-logo.svg"></a>.
+
+            <!--<a id="already-subscribed-home-button" class="primary-button" href=<%= JSON.stringify(htmlWebpackPlugin.options.app_url) %>>Get Alpha Access</a>-->
+            <a id="already-subscribed-home-button" class="primary-button go-home-button" href="index.html">Go Home</a>
+
+        </div>
+
+
+    </div>
+
 
     <div id="footer">
-
 
         <div class="bottom-footer">
 
