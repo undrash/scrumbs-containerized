@@ -1,25 +1,27 @@
 
 
-const nameInput     = document.getElementById( "subscriber-name" );
-const emailInput    = document.getElementById( "subscriber-email" );
-const subscribeBtn  = document.getElementById( "subscribe-button" );
+const nameInput         = document.getElementById( "subscriber-name" );
+const emailInput        = document.getElementById( "subscriber-email" );
+const subscribeBtn      = document.getElementById( "subscribe-button" );
 
+const nameInputError    = document.getElementById( "name-input-error" );
+const emailInputError   = document.getElementById( "email-input-error" );
 
 let blocked = false;
+
 
 
 subscribeBtn.addEventListener( "click", () => {
 
     if ( blocked ) return;
-    blocked = true;
+
+    disableForm();
 
     const name      = nameInput.value;
     const email     = emailInput.value;
 
-    console.log( "CLICK REGISTERED!" );
 
     if ( validateName( name ) && validateEmail( email ) ) {
-
 
         httpRequest(
             "POST",
@@ -30,32 +32,76 @@ subscribeBtn.addEventListener( "click", () => {
             },
             (response) => {
 
-                console.info( "Request success" );
-                blocked = false;
+                alert( "Successfully subscribed!" );
+                console.log( response );
+                resetForm();
+                enableForm();
             },
             (message) => {
-                console.warn( message );
-                blocked = false;
+                alert( message );
+                resetForm();
+                enableForm();
             }
         );
 
     } else {
-        alert( "Please provide a valid name and email address" );
+        enableForm();
     }
 
 });
 
 
+nameInput.addEventListener( "focus", () => nameInputError.classList.remove( "show-input-error" ) );
+
+emailInput.addEventListener( "focus", () => emailInputError.classList.remove( "show-input-error" ) );
+
+
+
+
+function disableForm() {
+    blocked             = true;
+    nameInput.disabled  = true;
+    emailInput.disabled = true;
+}
+
+
+
+function enableForm() {
+    blocked             = false;
+    nameInput.disabled  = false;
+    emailInput.disabled = false;
+}
+
+
+function resetForm() {
+    nameInput.value     = "";
+    emailInput.value    = "";
+}
+
+
 
 function validateEmail(email) {
     let regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-    return regex.test( String(email).toLocaleLowerCase() );
+
+    const isEmailValid = regex.test( String(email).toLocaleLowerCase() );
+
+    if ( ! isEmailValid ) {
+        emailInputError.classList.add( "show-input-error" );
+    }
+
+    return isEmailValid;
 }
 
 
 
 function validateName(name) {
-    return name.length > 2 && name.length < 100;
+    const isNameValid = name.length >= 2 && name.length < 100;
+
+    if ( ! isNameValid ) {
+        nameInputError.classList.add( "show-input-error" );
+    }
+
+    return isNameValid;
 }
 
 
