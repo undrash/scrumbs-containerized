@@ -605,6 +605,11 @@ transition: all .2s ease-in-out;
     font-size: 12px;
     margin-top: 10px;
     opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+
+.show-input-error {
+    opacity: 1;
 }
 
 
