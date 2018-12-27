@@ -508,7 +508,7 @@ transition: all .2s ease-in-out;
 /* subscribe page style ------------------------------------------ */
 
 #subscribe-container {
-    height: calc(100vh - 246px);
+    height: calc(100vh - 215px);
     min-height: 860px;
     /*background: grey;*/
     /*display: none;*/
@@ -627,7 +627,7 @@ transition: all .2s ease-in-out;
     /*height: auto;*/
     margin: auto;
     text-align: center;
-    height: calc(100vh - 246px);
+    height: calc(100vh - 215px);
     min-height: 860px;
     padding: 200px 60px 0 60px;
     box-sizing: border-box;
@@ -691,7 +691,11 @@ transition: all .2s ease-in-out;
 }
 
 .list-item-indent {
-    text-indent: 15px;
+    padding-left: 15px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
 }
 
 
@@ -810,8 +814,11 @@ transition: all .2s ease-in-out;
         height: 200px;
         position: relative;
         line-height: normal;
+        padding: 40px 20px 0 20px;
+    }
+
+    .bottom-footer-mobile-margin {
         margin-top: 40px;
-        padding: 0 60px;
     }
 
     .footer-navigation {
@@ -1118,7 +1125,7 @@ transition: all .2s ease-in-out;
     }
 
     .bottom-footer {
-        padding: 0 20px;
+        padding: 40px 20px 0 20px;
     }
 
     .subscribe-info {
