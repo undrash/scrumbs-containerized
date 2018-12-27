@@ -1,11 +1,17 @@
 
 
-const nameInput         = document.getElementById( "subscriber-name" );
-const emailInput        = document.getElementById( "subscriber-email" );
-const subscribeBtn      = document.getElementById( "subscribe-button" );
+const nameInput                     = document.getElementById( "subscriber-name" );
+const emailInput                    = document.getElementById( "subscriber-email" );
+const subscribeBtn                  = document.getElementById( "subscribe-button" );
 
-const nameInputError    = document.getElementById( "name-input-error" );
-const emailInputError   = document.getElementById( "email-input-error" );
+const nameInputError                = document.getElementById( "name-input-error" );
+const emailInputError               = document.getElementById( "email-input-error" );
+
+
+const subscribeContainer            = document.getElementById( "subscribe-container" );
+const subscribeSuccessContainer     = document.getElementById( "subscribed-feedback" );
+const alreadySubscribedContainer    = document.getElementById( "already-subscribed-feedback" );
+
 
 let blocked = false;
 
@@ -31,16 +37,17 @@ subscribeBtn.addEventListener( "click", () => {
                 email
             },
             (response) => {
+                console.info( response );
+                subscribeContainer.style.display            = "none";
+                subscribeSuccessContainer.style.display     = "block";
 
-                alert( "Successfully subscribed!" );
-                console.log( response );
-                resetForm();
-                enableForm();
+
             },
             (message) => {
-                alert( message );
-                resetForm();
-                enableForm();
+                console.warn( message );
+                subscribeContainer.style.display            = "none";
+                alreadySubscribedContainer.style.display    = "block";
+
             }
         );
 
