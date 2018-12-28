@@ -32,7 +32,7 @@ class SubscriptionController {
     public subscribe = async (req: Request, res: Response) => {
         const { name, email } = req.body;
 
-        if ( name.length < 2 || ValidationHelper.validateEmail( email ) ) {
+        if ( name.length < 2 || ! ValidationHelper.validateEmail( email ) ) {
             res.send( { success: false, message: "Invalid subscription credentials. Please provide a name - at least two characters long - and a valid email address to subscribe." } );
             return;
         }
