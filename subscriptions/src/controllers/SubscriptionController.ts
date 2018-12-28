@@ -1,5 +1,4 @@
 
-
 import { Router, Request, Response, NextFunction } from "express";
 
 import { ValidationHelper } from "../helpers/ValidationHelper";
@@ -7,8 +6,8 @@ import { Subscriber } from "../entity/Subscriber";
 
 import * as nodemailer from "nodemailer";
 
-
-
+import * as hbs from "nodemailer-express-handlebars";
+import * as path from "path";
 
 
 class SubscriptionController {
@@ -61,10 +60,27 @@ class SubscriptionController {
             }
         });
 
+        smtpTransport.use( "compile", hbs({
+            viewPath: path.join( __dirname, "../templates" ),
+            extName: ".hbs"
+        }));
+
+
+        // const mailOptions = {
+        //     to: email,
+        //     subject: "Scrumbs - subscribed successfully!",
+        //     text: `Hi ${ name },\n\nThanks for subscribing to the alpha release!\n\n\nUnsubscribe: http://${ req.headers.host }/http/unsubscribe/${ subscriber.id }`
+        // };
+
+
         const mailOptions = {
             to: email,
-            subject: "Scrumbs - subscribed successfully!",
-            text: `Hi ${ name },\n\nThanks for subscribing to the alpha release!\n\n\nUnsubscribe: http://${ req.headers.host }/http/unsubscribe/${ subscriber.id }`
+            subject: "Scrumbs - successfully subscribed!",
+            template: "subscribed",
+            context: {
+                name,
+                unSubscribe: `http://${ req.headers.host }/http/unsubscribe/${ subscriber.id }`
+            }
         };
 
         await smtpTransport.sendMail( mailOptions, (err: any) => {
@@ -72,10 +88,21 @@ class SubscriptionController {
             if ( err ) throw err;
 
         });
+
+        // const adminMailOptions = {
+        //     to: process.env.ADMIN_EMAIL_ADDRESS,
+        //     subject: `Scrumbs subscriber - ${ name }`,
+        //     text: `Name: ${ name }\nEmail: ${ email }`
+        // };
+
         const adminMailOptions = {
             to: process.env.ADMIN_EMAIL_ADDRESS,
             subject: `Scrumbs subscriber - ${ name }`,
-            text: `Name: ${ name }\nEmail: ${ email }`
+            template: "new-subscriber",
+            context: {
+                name,
+                email
+            }
         };
 
 

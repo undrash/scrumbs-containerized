@@ -20,6 +20,7 @@
       "graphql-tools": "^4.0.3",
       "graphql-yoga": "^1.16.8",
       "nodemailer": "^4.7.0",
+      "nodemailer-express-handlebars": "^3.0.0",
       "nodemon": "^1.18.9",
       "pg": "^7.7.1",
       "reflect-metadata": "^0.1.12",

@@ -6,7 +6,7 @@
       "sourceMap": true,
       "outDir": "./dist",
       "moduleResolution": "node",
-
+      "typeRoots": [ "./src/types"],
       "removeComments": true,
       "noImplicitAny": true,
       "strictNullChecks": true,

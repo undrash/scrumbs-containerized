@@ -15,9 +15,7 @@ import { createConnection } from "typeorm";
 import * as bodyParser from "body-parser";
 import * as path from "path";
 import * as cors from "cors";
-
-
-
+import * as express from "express";
 
 const typeDefs = importSchema( path.join( __dirname, "./modules/Schema.graphql" ) );
 
@@ -25,6 +23,9 @@ const typeDefs = importSchema( path.join( __dirname, "./modules/Schema.graphql" 
 const server = new GraphQLServer( { typeDefs, resolvers } );
 server.use( bodyParser.json() );
 server.use( cors() );
+
+
+server.use( "/public", express.static( path.join( __dirname, "public" ) ) );
 
 
 const schema = makeExecutableSchema({

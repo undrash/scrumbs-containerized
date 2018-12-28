@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Added Promotion</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 5px 5px 50px 5px;
+        }
+
+        html {
+            background-image: linear-gradient(0deg, #F6F6F9 48%, #FFFFFF 100%);
+            font-weight: normal;
+        }
+
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            margin:0;
+            padding:0;
+            font-size:100%;
+            vertical-align:baseline;
+            background:transparent;
+            color:inherit;
+            text-decoration: none; /* no underline */
+        }
+
+        table {
+            border: none;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: none;
+        }
+
+
+        .user-name {
+            font-weight: bold;
+        }
+
+        .header {
+            height: 130px;
+            padding: 0 0 0 50px;
+        }
+
+        .brand {
+            display: inline-block;
+        }
+
+        .link {
+            font-size: 12px;
+            color: #7985FF;
+            text-transform: initial;
+            display: inline-block;
+            line-height: 130px;
+            text-align: right;
+            transition: color .2s ease-in-out;
+        }
+
+        .link:hover {
+            color: #5468E6;
+        }
+
+        .half-container {
+            width: 45%;
+        }
+
+        .newsletter {
+            margin: 0 auto 0 auto;
+            max-width: 600px;
+        }
+
+        .table-content {
+            background-color: #ffffff;
+            width: 100%;
+
+        }
+
+        .message {
+            margin: 50px auto 50px auto;
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+            color: #424242;
+            max-width: 410px;
+            line-height: 28px;
+            padding: 0 30px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            display: block;
+        }
+
+        .source-company {
+            height: 50px;
+            text-align: center;
+        }
+
+        .source-label {
+            display: inline-block;
+            margin-right: 15px;
+            opacity: 0.7;
+            color: #9B9AA9;
+        }
+
+        .planeeet-logo {
+            position: initial;
+            margin: -10px;
+        }
+
+        #footer-navigation {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            width: 100%;
+            color: #9B9AA9;
+            font-size: 12px;
+            padding: 50px 0;
+        }
+
+        .footer-menu-item {
+            display: inline-block;
+            margin-right: 25px;
+            margin-left: 25px;
+            opacity: 0.7;
+            transition: all .2s ease-in-out;
+            text-decoration: none;
+            font-weight: initial;
+        }
+
+        .footer-menu-item:hover {
+            color: #242246;
+        }
+
+        @media only screen and (max-width: 390px) {
+
+            .header {
+                padding: 50px 0;
+                height: 50px;
+            }
+
+            .half-container {
+                width: 100%;
+                text-align: center;
+            }
+
+            .link {
+                line-height: initial;
+                margin-top: 50px;
+            }
+
+            #footer-navigation {
+                margin: 0;
+                padding: 25px 0 0 0;
+            }
+
+            .footer-menu-item {
+                display: block;
+                margin-bottom: 40px;
+            }
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<table class="newsletter" align="center" width="100%" cellspacing="0">
+    <tr>
+        <td class="content">
+
+            <table class="table-content">
+                <tr>
+                    <td>
+                        <div class="header">
+                            <div class="brand half-container">
+                                <img class="scrumbs-logo " width="160px" src="/public/img/scrumbs-logo-colored.svg">
+                            </div>
+                            <a href="index.html" class="link half-container">View in Browser</a>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="message">Hello <span class="user-name">{{ name }}</span>,<br><br>Thank you for subscribing to the Scrumbs alpha release. You will be among the first to get notified of our soft launch!
+                            <span class="signature">
+                                    Thank you for your support!<br>Andrei
+                                </span>
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="source-company">
+                            <div class="source-label">Powered by</div>
+                            <a  href="http://planeeet.com" target="_blank"><img class="planeeet-logo" src="/public/img/planeeet-logo.svg"></a>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        <ul id="footer-navigation">
+                            <li class="footer-menu-item"><a href="http://planeeet.com" target="_blank">Contact</a></li>
+                            <li class="footer-menu-item"><a href="http://planeeet.com" target="_blank">Scrumbs</a></li>
+                            <li class="footer-menu-item"><a href={{ unSubscribe }} target="_blank">Unsubscribe</a></li>
+                        </ul>
+
+                    </td>
+
+                </tr>
+
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+</body>
+</html>
