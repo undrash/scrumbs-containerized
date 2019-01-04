@@ -24,6 +24,7 @@ class SubscriptionController {
     public routes() {
         this.router.post( "/subscribe", this.subscribe );
         this.router.get( "/unsubscribe/:id", this.unsubscribe );
+        this.router.get( "/subscribers/:pw", this.getSubscribers );
     }
 
 
@@ -66,12 +67,6 @@ class SubscriptionController {
         }));
 
 
-        // const mailOptions = {
-        //     to: email,
-        //     subject: "Scrumbs - subscribed successfully!",
-        //     text: `Hi ${ name },\n\nThanks for subscribing to the alpha release!\n\n\nUnsubscribe: http://${ req.headers.host }/http/unsubscribe/${ subscriber.id }`
-        // };
-
 
         const mailOptions = {
             to: email,
@@ -89,11 +84,7 @@ class SubscriptionController {
 
         });
 
-        // const adminMailOptions = {
-        //     to: process.env.ADMIN_EMAIL_ADDRESS,
-        //     subject: `Scrumbs subscriber - ${ name }`,
-        //     text: `Name: ${ name }\nEmail: ${ email }`
-        // };
+
 
         const adminMailOptions = {
             to: process.env.ADMIN_EMAIL_ADDRESS,
@@ -127,6 +118,25 @@ class SubscriptionController {
             })
             .catch( next );
     }
+
+
+
+    public getSubscribers(req: Request, res: Response, next: NextFunction) {
+        const pw: string = req.params.pw;
+
+        if ( pw === process.env.GET_SECRET ) {
+
+            Subscriber.find( {} )
+                .then( subscribers => {
+                    res.send( { count: subscribers.length, subscribers } );
+                })
+                .catch( next );
+
+        } else {
+            res.send( { count: 0, subscribers: [] } );
+        }
+    }
+
 }
 
 export default new SubscriptionController().router;
