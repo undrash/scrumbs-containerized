@@ -28,6 +28,10 @@ input[type=password] {
     box-sizing : border-box;
 }
 
+ul {
+    list-style: none;
+}
+
 .primary-button {
     padding: 20px;
     background: linear-gradient(90deg, #6CB7FF 0%, #7985FF 100%);
@@ -98,9 +102,20 @@ input[type=password] {
 .secondary-title {
     font-size: 26px;
     font-weight: bold;
+    line-height: 35px;
     color: #242246;
     margin-bottom: 15px;
     text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.secondary-title-disabled {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #9B9AA9;
+    line-height: 35px;
 }
 
 .primary-text {
@@ -115,6 +130,12 @@ input[type=password] {
     line-height: 28px;
     text-align: center;
     /*font-weight: 600;*/
+}
+
+.secondary-text-disabled {
+    font-size: 14px;
+    line-height: 28px;
+    color: #9B9AA9;
 }
 
 .link {
@@ -537,7 +558,7 @@ transition: all .2s ease-in-out;
     background-size: 971px;
 }
 
-.subscribe-card-bg {
+.card-bg {
     width: 875px;
     /*height: 560px;*/
     height: auto;
@@ -658,8 +679,9 @@ transition: all .2s ease-in-out;
 
 #mobile-menu {
     height: 100vh;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
+    position: fixed;
     z-index: 2;
     text-align: center;
     padding-top: 50px;
@@ -697,6 +719,100 @@ transition: all .2s ease-in-out;
 .margin-top-30 {
     margin-top: 30px;
 }
+
+/*downloads------------------------------------------------------------------------*/
+
+#downloads-container {
+    max-width: 1010px;
+    margin: auto;
+}
+
+#downloads-section {
+    height: 1000px;
+}
+
+.downloads-headline {
+    text-align: center;
+    line-height: 50px;
+    width: 600px;
+    margin: 60px auto 0 auto;
+}
+
+#downloads-card {
+    padding: 50px 30px 50px 50px;
+    width: 100%;
+    background-image: linear-gradient(90deg, #FFFFFF 0%, #F8F8FA 56%);
+}
+
+.app-thumbnail {
+    display: inline-block;
+}
+
+.app-details {
+    display: inline-block;
+    margin-left: 40px;
+
+}
+
+.app-details .secondary-title {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.app-details .secondary-text {
+    margin-top: 0;
+    text-align: left;
+    color: #636185;
+}
+
+.device-type {
+    height: auto;
+    /*background-color: #EAEBF1;*/
+    padding: 30px 0;
+}
+
+#android-app {
+    color: #9B9AA9;
+}
+
+.tertiary-button {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #636185;
+    float: right;
+    padding: 20px 20px 20px 40px;
+    text-align: right;
+    border-radius: 5px;
+    /*background-color: #cccccc;*/
+    background: url("../images/download-icon-white.svg") 15px 3px no-repeat;
+    transition: all ease-out 0.3s;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.tertiary-button-disabled {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #9B9AA9;
+    float: right;
+    padding: 20px 20px 20px 40px;
+    text-align: right;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.tertiary-button:hover {
+    background: url("../images/download-icon.svg") 15px center no-repeat;
+    font-weight: bold;
+    background-color: #ffffff;
+    box-shadow: 0 15px 15px -10px rgba(99,97,133,0.3);
+}
+
+#get-started-downloads {
+    float: right;
+}
+
 
 
 
@@ -758,6 +874,10 @@ transition: all .2s ease-in-out;
 
     #footer-description {
         width: 520px;
+    }
+
+    #downloads-container {
+        padding: 0 30px;
     }
 
 }
@@ -970,34 +1090,49 @@ transition: all .2s ease-in-out;
         width: 100%;
     }
 
-    /*.footer-navigation {*/
-    /*float: none;*/
-    /*display: block;*/
-    /*}*/
+    #downloads-section {
+        height: 1750px;
+    }
 
-    /*li {*/
-    /*margin: 0 30px;*/
-    /*}*/
+    .downloads-headline {
+        width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
 
-    /*.social-media-buttons-container {*/
-    /*float: none;*/
-    /*}*/
+    #downloads-card {
+        padding: 50px;
+    }
 
-    /*.source-company {*/
-    /*position: absolute;*/
-    /*bottom: 30px;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*}*/
+    .app-thumbnail, .app-details{
+        display: block;
+        margin: auto;
+    }
 
-    /*.planeeet-logo {*/
-    /*position: initial;*/
-    /*margin: -10px;*/
-    /*}*/
+    .app-details .secondary-title, .secondary-title-disabled {
+        text-align: center;
+        margin-top: 50px;
+    }
 
-    /*#subscribe-container {*/
-    /*height: auto;*/
-    /*display: inline-block;*/
+    .app-details .secondary-text {
+        text-align: center;
+    }
+
+    .app-details .secondary-text-disabled {
+        text-align: center;
+    }
+
+    .tertiary-button, .tertiary-button-disabled, #get-started-downloads {
+        float: none;
+        display: inline-block;
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /*.app-details {*/
+        /*display: block;*/
+        /*margin: auto;*/
     /*}*/
 
 }
@@ -1035,7 +1170,7 @@ transition: all .2s ease-in-out;
 
 @media only screen and (max-width: 500px) {
 
-    .subscribe-card-bg {
+    .card-bg {
         padding: 30px 15px;
     }
 
@@ -1043,11 +1178,6 @@ transition: all .2s ease-in-out;
         padding: 0 10px;
         height: 610px;
     }
-
-    /*.subscribe-form-container {*/
-        /*background-size: 880px;*/
-        /*height: 590px;*/
-    /*}*/
 
     .download-btn {
         width: 80%;
@@ -1162,6 +1292,42 @@ transition: all .2s ease-in-out;
         min-height: 250px;
         height: calc(100vh - 280px);
         display: inline-block;
+    }
+
+}
+
+@media only screen and (min-height: 1024px) {
+
+    #mobile-menu {
+        background-color: #636185;
+    }
+
+}
+
+@media only screen and (max-height: 610px) {
+
+    .mobile-menu-item {
+        margin-bottom: 45px;
+    }
+
+}
+
+
+@media only screen and (max-height: 505px) {
+
+    #close-mobile-menu-btn {
+        right: 50px;
+        left: initial;
+    }
+
+}
+
+@media only screen and (max-height: 480px) {
+
+    #close-mobile-menu-btn {
+        right: 25px;
+        bottom: 25px;
+        left: initial;
     }
 
 }

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Scrumbs | Downloads</title>
+    <link rel="stylesheet" href="resources/css/style-reset.css">
+    <link rel="stylesheet" href="resources/css/scrumbs-stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+
+    <div id="mobile-menu">
+
+        <div id="mobile-logo">
+            <img class="navbar-logo" src="resources/images/scrumbs%20logo-colored.svg">
+        </div>
+
+        <ul id="mobile-navigation">
+
+            <li class="mobile-menu-item">Contact</li>
+            <li class="mobile-menu-item">Privacy & terms</li>
+            <li class="mobile-menu-item">Downloads</li>
+
+        </ul>
+
+        <a id="get-started-btn-mobile" class="primary-button" href=<%= JSON.stringify(htmlWebpackPlugin.options.app_url) %> >Get Alpha Access</a>
+        <!--<a id="get-started-btn-mobile" class="primary-button">Get Alpha Access</a>-->
+
+
+        <div id="close-mobile-menu-btn">
+
+            <img class="close-menu-btn" src="resources/images/close-icon.svg">
+
+        </div>
+
+    </div>
+
+    <div id="navbar">
+
+        <a id="scrumbs-logo" href="index.html">
+            <img class="navbar-logo" src="resources/images/scrumbs%20logo-colored.svg">
+        </a>
+
+        <div id="downloads-btn">
+
+            <a class="navbar-button-style">Downloads</a>
+
+        </div>
+
+
+        <div id="authentication-container">
+
+            <div id="sign-in-btn">
+
+            <a class="navbar-button-style">Sign-In</a>
+
+            </div>
+
+            <a id="get-started-btn-navbar" class="primary-button" href=<%= JSON.stringify(htmlWebpackPlugin.options.app_url) %>>Get Alpha Access</a>
+            <!--<a id="get-started-btn-navbar" class="primary-button">Get Alpha Access</a>-->
+
+        </div>
+
+
+        <div id="navbar-menu-btn">
+
+            <img class="hamburger-icon" src="resources/images/menu-icon.svg">
+
+        </div>
+
+    </div>
+
+
+    <div id="downloads-section">
+
+        <div class="downloads-headline">
+
+             <div class="secondary-title">Download our apps to have acces to Scrumbs anywhere you go.</div>
+
+        </div>
+
+
+        <div id="downloads-container">
+
+            <div id="downloads-card" class="card-bg">
+
+                <div id="windows-app" class="device-type">
+
+                    <img class="app-thumbnail" src="resources/images/windows-img.svg">
+                    <div class="app-details">
+
+                        <div class="secondary-title">Scrumbs for Windows</div>
+                        <div class="secondary-text">Windows 7-10 • all editions • x86 and x64</div>
+
+                    </div>
+
+                    <div class="tertiary-button">Download</div>
+
+                </div>
+
+                <div id="mac-app" class="device-type">
+
+                    <img class="app-thumbnail" src="resources/images/apple-img.png">
+                    <div class="app-details">
+
+                        <div class="secondary-title">Scrumbs for MacOS</div>
+                        <div class="secondary-text">Yosemite | El Capitan | Sierra | Mojave • x86 and x64</div>
+
+                    </div>
+
+                    <div class="tertiary-button">Download</div>
+
+                </div>
+
+                <div id="ios-app" class="device-type">
+
+                    <img class="app-thumbnail" src="resources/images/apple-img.png">
+                    <div class="app-details">
+
+                        <div class="secondary-title">Scrumbs for iOS</div>
+                        <div class="secondary-text">Most phones and tablets covered</div>
+
+                    </div>
+
+                    <div class="tertiary-button">Download from app store</div>
+
+                </div>
+
+                <div id="android-app" class="device-type device-type-unavailable">
+
+                    <img class="app-thumbnail" src="resources/images/android-img.png">
+                    <div class="app-details">
+
+                        <div class="secondary-title-disabled">Scrumbs for Android</div>
+                        <div class="secondary-text-disabled">Most phones and tablets covered</div>
+
+                    </div>
+
+                    <div class="tertiary-button-disabled">Coming soon</div>
+
+                </div>
+
+                <div id="browser-app" class="device-type">
+
+                    <img class="app-thumbnail" src="resources/images/web-img.svg">
+                    <div class="app-details">
+
+                        <div class="secondary-title">Scrumbs for Web</div>
+                        <div class="secondary-text">Most browsers covered</div>
+
+                    </div>
+
+                    <div id="get-started-downloads" class="primary-button">Get Access</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div id="footer">
+
+        <div class="bottom-footer">
+
+            <ul class="footer-navigation">
+                <li class="footer-menu-item"><a href="terms.html" target="_blank">Privacy & Terms</a></li>
+                <li class="footer-menu-item"><a href="http://planeeet.com" target="_blank">Contact</a></li>
+            </ul>
+
+            <div class="source-company">
+                <div class="source-label">Powered by</div>
+                <a href="http://planeeet.com" target="_blank"><img class="planeeet-logo" src="resources/images/planeeet-logo.svg"></a>
+            </div>
+
+            <div class="social-media-buttons-container">
+
+                <div class="social-btn linked-in-btn"></div>
+                <div class="social-btn twitter-btn"></div>
+                <div class="social-btn facebook-btn"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

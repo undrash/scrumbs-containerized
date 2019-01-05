@@ -9,7 +9,8 @@ const CopyWebpackPlugin = require( "copy-webpack-plugin" );
 const titles = {
     index: "Home",
     subscribe: "Subscribe",
-    terms: "Terms"
+    terms: "Terms",
+    downloads: "Downloads"
 };
 
 
