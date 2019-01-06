@@ -728,7 +728,7 @@ transition: all .2s ease-in-out;
 }
 
 #downloads-section {
-    height: 1000px;
+    height: calc(100vh - 290px);
 }
 
 .downloads-headline {
