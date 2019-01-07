@@ -743,6 +743,7 @@ transition: all .2s ease-in-out;
 
 #downloads-section {
     height: calc(100vh - 290px);
+    min-height: 900px;
 }
 
 .downloads-headline {
