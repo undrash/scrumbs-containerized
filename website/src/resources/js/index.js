@@ -7,10 +7,13 @@ const closeMobileMenu   = document.getElementById( "close-mobile-menu-btn" );
 
 
 hamburgerMenu.addEventListener( "click", () => {
-    mobileMenu.style.display = "block";
+    mobileMenu.style.display        = "block";
+    document.body.style.overflow    = "hidden";
 });
 
 
 closeMobileMenu.addEventListener( "click", () => {
-    mobileMenu.style.display = "none";
+    mobileMenu.style.display        = "none";
+    document.body.style.overflow    = "auto";
+
 });
