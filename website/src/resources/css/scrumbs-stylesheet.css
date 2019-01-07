@@ -718,6 +718,7 @@ transition: all .2s ease-in-out;
 
 .mobile-menu-item {
     margin-bottom: 75px;
+    display: block;
 }
 
 .close-menu-btn {
