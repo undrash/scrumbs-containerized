@@ -10,6 +10,7 @@
 
 body {
     background: linear-gradient(0deg, #F6F6F9 0%, #FFFFFF 100%);
+
 }
 
 a {
@@ -53,6 +54,7 @@ ul {
     -o-transition: transform .2s ease-in-out;
     transition: transform .2s ease-in-out;
     display: inline-block;
+    cursor: pointer;
 }
 
 .full-width-primary-button {
@@ -115,20 +117,23 @@ ul {
 .secondary-title {
     font-size: 26px;
     font-weight: bold;
-    line-height: 35px;
+    /*line-height: 35px;*/
     color: #242246;
     margin-bottom: 15px;
     text-align: center;
     font-family: 'Lato', sans-serif;
+    line-height: 50px;
 }
 
 .secondary-title-disabled {
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 5px;
-    text-align: center;
+    /*text-align: center;*/
     color: #9B9AA9;
+    text-align: left;
     line-height: 35px;
+    font-family: 'Lato', sans-serif;
 }
 
 .primary-text {
@@ -269,6 +274,7 @@ ul {
     float: left;
     margin: 0 1%;
     padding-top: 50px;
+    padding-bottom: 50px;
     border-radius: 5px;
 }
 
@@ -406,7 +412,7 @@ ul {
     background-color: #ffffff;
     text-transform: uppercase;
     text-align: center;
-    box-shadow: 0 15px 9px -10px rgba(121,133,255,0.5);
+    box-shadow: 0 15px 9px -10px rgba(121,133,255,0.3);
     font-size: 14px;
     display: inline-block;
     font-weight: bold;
@@ -673,6 +679,64 @@ transition: all .2s ease-in-out;
     max-width: 280px;
 }
 
+/*unsubscribed page style --------------------------------------------------------------*/
+
+#unsubscribed-container {
+    max-width: 700px;
+    height: auto;
+    margin-top: 110px;
+    padding: 50px 50px;
+}
+
+#unsubscribed-container .subscribe-navbar-logo {
+    margin: 0 auto 40px auto;
+    text-align: center;
+    display: block;
+}
+
+#unsubscribed-container .button-container {
+    text-align: center;
+    float: none;
+    margin-top: 40px;
+}
+
+#unsubscribed-container .button-container .primary-button {
+    padding: 20px 80px;
+}
+
+.unsubscribe-footer {
+    position: relative;
+    line-height: normal;
+    padding: 40px 20px 0 20px;
+    text-align: center;
+}
+
+#unsubscribed-container .footer-navigation {
+    float: none;
+    color: #9B9AA9;
+    font-size: 14px;
+}
+
+#unsubscribed-container .footer-menu-item {
+    margin: 0 25px;
+}
+
+#unsubscribed-container .source-company {
+    position: initial;
+    display: block;
+    margin-bottom: 50px;
+    color: #9B9AA9;
+    font-size: 14px;
+}
+
+#unsubscribed-container .planeeet-logo {
+    position: initial;
+    margin-bottom: -10px;
+}
+
+
+
+
 /*terms ------------------------------------------------------------------------------*/
 
 .terms-container {
@@ -737,13 +801,14 @@ transition: all .2s ease-in-out;
 /*downloads------------------------------------------------------------------------*/
 
 #downloads-container {
-    max-width: 1010px;
+    /*max-width: 1010px;*/
     margin: auto;
+    max-width: 1030px;
 }
 
 #downloads-section {
-    height: calc(100vh - 290px);
-    min-height: 900px;
+    padding-bottom: 200px;
+    background: url(../images/downloads-bubble.svg) center 80px no-repeat;
 }
 
 .downloads-headline {
@@ -772,6 +837,7 @@ transition: all .2s ease-in-out;
 .app-details .secondary-title {
     margin-bottom: 5px;
     text-align: left;
+    line-height: 20px;
 }
 
 .app-details .secondary-text {
@@ -783,7 +849,7 @@ transition: all .2s ease-in-out;
 .device-type {
     height: auto;
     /*background-color: #EAEBF1;*/
-    padding: 30px 0;
+    padding: 20px 0 20px 0;
 }
 
 #android-app {
@@ -794,7 +860,7 @@ transition: all .2s ease-in-out;
     text-transform: uppercase;
     font-size: 14px;
     color: #636185;
-    float: right;
+    /*float: right;*/
     padding: 20px 20px 20px 40px;
     text-align: right;
     border-radius: 5px;
@@ -809,7 +875,7 @@ transition: all .2s ease-in-out;
     text-transform: uppercase;
     font-size: 14px;
     color: #9B9AA9;
-    float: right;
+    /*float: right;*/
     padding: 20px 20px 20px 40px;
     text-align: right;
     border-radius: 5px;
@@ -824,13 +890,98 @@ transition: all .2s ease-in-out;
     box-shadow: 0 15px 15px -10px rgba(99,97,133,0.3);
 }
 
-#get-started-downloads {
+
+.button-container {
     float: right;
 }
 
+.top-image {
+    position: absolute;
+    top: 100px;
+    width: 90%;
+    display: none;
+    z-index: -1;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.bottom-image {
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    display: none;
+    z-index: -1;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
 
+/*404 error ------------------------------------------------------------------------*/
 
+#error-main-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0deg, #F6F6F9 0%, #FFFFFF 100%);
+    padding-top: 80px;
+}
 
+#logo-container {
+    /*max-width: 30%;*/
+    text-align: center;
+    width: 100%;
+    /*margin: auto;*/
+    margin: 0 auto 80px auto;
+}
+
+.error-container {
+    max-width: 610px;
+    text-align: center;
+    height: 410px;
+    margin: auto;
+    background: url("../images/downloads-bubble.svg") no-repeat center;
+    background-size: 100%;
+}
+
+.error-card {
+    max-width: 570px;
+}
+
+.scrumbs-logo {
+    width: 160px;
+}
+
+.error-type-style {
+    color: #D3D5E6;
+    font-size: 180px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.error-message {
+    font-size: 20px;
+    font-weight: 700;
+    color: #636185;
+}
+
+#error-footer {
+    margin: auto;
+}
+
+#error-footer, .secondary-text {
+    max-width: 430px;
+    padding-top: 30px;
+}
+
+#error-footer .button-container {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    color: #9B9AA9;
+}
+
+#error-footer, .secondary-btn {
+    color: #9B9AA9;
+
+}
 
 @media only screen and (min-width: 1366px) {
 
@@ -946,7 +1097,7 @@ transition: all .2s ease-in-out;
     }
 
     .bottom-footer {
-        height: 200px;
+        height: 190px;
         position: relative;
         line-height: normal;
         padding: 40px 20px 0 20px;
@@ -1106,7 +1257,9 @@ transition: all .2s ease-in-out;
     }
 
     #downloads-section {
-        height: 1750px;
+        padding-bottom: 90px;
+        background: initial;
+        position: relative;
     }
 
     .downloads-headline {
@@ -1119,6 +1272,10 @@ transition: all .2s ease-in-out;
         padding: 50px;
     }
 
+    .app-thumbnail {
+        height: 60px;
+    }
+
     .app-thumbnail, .app-details{
         display: block;
         margin: auto;
@@ -1126,7 +1283,9 @@ transition: all .2s ease-in-out;
 
     .app-details .secondary-title, .secondary-title-disabled {
         text-align: center;
-        margin-top: 50px;
+        /*margin-top: 50px;*/
+        margin: 50px 0 20px 0;
+        line-height: 35px;
     }
 
     .app-details .secondary-text {
@@ -1150,6 +1309,22 @@ transition: all .2s ease-in-out;
         /*margin: auto;*/
     /*}*/
 
+    .tertiary-button {
+        background: url("../images/download-icon.svg") 15px center no-repeat;
+        font-weight: bold;
+        background-color: #ffffff;
+        box-shadow: 0 15px 15px -10px rgba(99,97,133,0.3);
+    }
+
+    .button-container {
+        text-align: center;
+        float: none;
+    }
+
+    .top-image, .bottom-image {
+        display: initial;
+    }
+
 }
 
 @media only screen and (max-width: 650px) {
@@ -1157,8 +1332,19 @@ transition: all .2s ease-in-out;
 
     #subscribe-form-inner-container {
         width: 100%;
-        /*padding: 70px 30px 0 30px;*/
     }
+
+    .error-container {
+        padding: 0 20px;
+    }
+
+    .error-card {
+        width: 100%;
+    }
+
+
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -1204,6 +1390,20 @@ transition: all .2s ease-in-out;
 
     .subscription-feedback {
         padding: 40px 35px;
+    }
+
+    .error-container {
+        background: url(../images/downloads-bubble.svg) no-repeat center 12px;
+        background-size: 100%;
+        height: 345px;
+    }
+
+    .error-card {
+        padding: 60px 20px 60px 20px;
+    }
+
+    .error-type-style {
+        font-size: 150px;
     }
 
 }
@@ -1261,16 +1461,35 @@ transition: all .2s ease-in-out;
         padding: 80px 40px;
     }
 
+    .bottom-footer {
+        height: 230px;
+    }
+
+    .terms-footer {
+        padding: 40px 20px 0 20px;
+        height: 280px;
+    }
+
     #footer-description {
         width: 100%;
+    }
+
+    .footer-menu-item {
+        display: block;
+        text-decoration: none;
+        margin-bottom: 30px;
+    }
+
+    .terms-footer.source-company {
+        bottom: 40px;
     }
 
     .info-text {
         margin-top: 20px;
     }
 
-    .bottom-footer {
-        padding: 40px 20px 0 20px;
+    .social-btn {
+        margin-top: 0;
     }
 
     .subscribe-info {
@@ -1284,20 +1503,34 @@ transition: all .2s ease-in-out;
         height: calc(100vh - 350px);
     }
 
+    #downloads-container {
+        padding: 0 15px;
+    }
+
+    .top-image {
+        top: 150px;
+    }
+
+    .error-container {
+        background: url(../images/downloads-bubble.svg) no-repeat center 20px;
+        background-size: 100%;
+    }
+
+    #error-main-container {
+        padding-top: 40px;
+    }
+
+    #logo-container {
+        margin: 0 auto 20px auto;
+    }
+
+    #error-footer .secondary-text{
+        padding: 10px;
+    }
 
 }
 
 @media only screen and (max-width: 400px) {
-
-    .bottom-footer {
-        height: 230px;
-    }
-
-    .footer-menu-item {
-        display: block;
-        text-decoration: none;
-        margin-bottom: 30px;
-    }
 
     .social-btn {
         margin-top: 0;
@@ -1307,6 +1540,34 @@ transition: all .2s ease-in-out;
         min-height: 250px;
         height: calc(100vh - 280px);
         display: inline-block;
+    }
+
+    .terms-footer {
+        height: 280px;
+    }
+
+    #error-footer {
+        padding: 0;
+    }
+
+    .error-container {
+        height: 290px;
+    }
+
+    .error-type-style {
+        font-size: 100px;
+    }
+
+    .error-message {
+        font-size: 16px;
+    }
+
+    #error-footer .secondary-text {
+        padding: 0 20px 20px 20px;
+    }
+
+    #error-footer .button-container {
+        margin-top: 0;
     }
 
 }
