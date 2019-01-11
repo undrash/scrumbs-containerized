@@ -537,6 +537,10 @@ transition: all .2s ease-in-out;
     margin-bottom: 15px;
 }
 
+.subscription-title {
+    margin-bottom: 30px;
+}
+
 .subscribe-form-container {
     background: url("../images/bg-shape.svg") center no-repeat;
     height: 650px;
@@ -639,6 +643,10 @@ transition: all .2s ease-in-out;
     margin: 40px auto 0 auto;
     display: block;
     max-width: 280px;
+}
+
+.subscription-title {
+    margin-bottom: 30px;
 }
 
 /*unsubscribed page style --------------------------------------------------------------*/
