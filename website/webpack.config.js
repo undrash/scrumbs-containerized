@@ -1,9 +1,9 @@
 
 
-const path = require( "path" );
-const webpack   = require( "webpack" );
-const HtmlWebpackPlugin = require( "html-webpack-plugin" );
-const CopyWebpackPlugin = require( "copy-webpack-plugin" );
+const path                  = require( "path" );
+const webpack               = require( "webpack" );
+const HtmlWebpackPlugin     = require( "html-webpack-plugin" );
+const CopyWebpackPlugin     = require( "copy-webpack-plugin" );
 
 
 const titles = {
@@ -14,12 +14,18 @@ const titles = {
 };
 
 
+const common = [ "common", "mobile-menu" ];
+
+
+
 
 module.exports = {
 
     entry: {
-        index: "./src/resources/js/index.js",
-        subscribe: "./src/resources/js/subscribe.js"
+        "mobile-menu": "./src/resources/js/mobile-menu.js",
+        "index": "./src/resources/js/index.js",
+        "subscribe": "./src/resources/js/subscribe.js",
+        "downloads": "./src/resources/js/downloads.js",
     },
 
     mode: "production",
@@ -48,7 +54,7 @@ module.exports = {
         Object.keys( titles ).map( function( id ) {
 
             return new HtmlWebpackPlugin({
-                chunks: [ "common", id ],
+                chunks: common.concat( [ id ] ) ,
                 filename: id + ".html",
                 template: "!!html-webpack-plugin/lib/loader.js!./src/" + id + ".html",
                 inject: "body",
