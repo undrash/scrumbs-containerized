@@ -114,7 +114,7 @@ class SubscriptionController {
 
         Subscriber.delete( { id } )
             .then( () => {
-                res.send( { success: true, message: "You successfully unsubscribed" } );
+                res.sendFile( path.join( __dirname, "../views/unsubscribed.html" ) );
             })
             .catch( next );
     }
