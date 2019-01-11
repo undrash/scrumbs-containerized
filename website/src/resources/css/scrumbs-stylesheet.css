@@ -2,15 +2,14 @@
 
 * {
     font-family: 'Montserrat', sans-serif;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /*-moz-osx-font-smoothing: grayscale;*/
+    /*-webkit-font-smoothing: antialiased;*/
+    /*-moz-osx-font-smoothing: grayscale;*/
     font-weight: 300;
 }
 
 body {
     background: linear-gradient(0deg, #F6F6F9 0%, #FFFFFF 100%);
-
 }
 
 a {
@@ -21,7 +20,6 @@ label {
     display: block;
     margin-bottom: 10px;
     font-size: 14px;
-    /*font-weight: 900;*/
 }
 
 input[type=text],
@@ -129,7 +127,6 @@ ul {
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 5px;
-    /*text-align: center;*/
     color: #9B9AA9;
     text-align: left;
     line-height: 35px;
@@ -208,7 +205,6 @@ ul {
 }
 
 #above-the-fold {
-    /*background-color: #ff9555;*/
     margin: auto;
     height: auto;
     padding-top: 135px;
@@ -228,7 +224,6 @@ ul {
     width: 50%;
     height: auto;
     display: inline-block;
-    /*background-color: #ffffff;*/
     float: left;
     box-sizing: border-box;
 }
@@ -242,25 +237,19 @@ ul {
     width: 50%;
     height: auto;
     display: inline-block;
-    /*background-color: #626262;*/
     float: right;
 }
 
 .cover-image {
     background: url("../images/illustration.png") no-repeat top left;
-    /*position: absolute;*/
     transform: translateY(-130px);
     height: 600px;
 }
-
-
 
 #features {
     max-width: 1366px;
     margin: auto;
     height: auto;
-    /*padding: 140px 60px 190px 60px;*/
-    /*background-color: #636185;*/
     padding: 0 40px 100px 40px;
     overflow: hidden;
     justify-content: space-between;
@@ -294,7 +283,6 @@ ul {
 }
 
 #section-1 {
-    /*background-color: #3385ff;*/
     width: 100%;
     height: 730px;
     overflow: auto;
@@ -315,7 +303,6 @@ ul {
 }
 
 #section-2 {
-    /*background-color: #326ad4;*/
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -326,7 +313,6 @@ ul {
     padding-top: 90px;
     padding-left: 60px;
     box-sizing: border-box;
-    /*background-color: #ffff99;*/
 }
 
 .download-btn-container {
@@ -351,10 +337,8 @@ ul {
 }
 
 .download-btn:hover {
-    /*outline: 2px solid #7985FF;*/
     transform: scale(1.05);
     cursor: pointer;
-    /*box-shadow: 0 15px 15px -10px rgba(121,133,255,0.5);*/
 }
 
 .download-btn-disabled {
@@ -387,7 +371,6 @@ ul {
     height: auto;
     color: #ffffff;
     display: inline-block;
-
 }
 
 .top-footer {
@@ -407,7 +390,6 @@ ul {
 }
 
 .secondary-btn {
-    /*width: 235px;*/
     padding: 20px 30px;
     background-color: #ffffff;
     text-transform: uppercase;
@@ -452,7 +434,6 @@ ul {
     display: inline-block;
     text-decoration: none;
     float: left;
-
 }
 
 .source-company {
@@ -477,24 +458,12 @@ ul {
     margin-left: 50px;
 }
 
-/*li {*/
-    /*display: inline-block;*/
-    /*margin-right: 50px;*/
-    /*opacity: 0.7;*/
-    /*transition: all .2s ease-in-out;*/
-/*}*/
-
 .footer-menu-item {
 display: inline-block;
 margin-right: 50px;
 opacity: 0.7;
 transition: all .2s ease-in-out;
 }
-
-/*li:hover {*/
-    /*opacity: 1;*/
-/*}*/
-
 
 .footer-menu-item:hover {
     opacity: 1;
@@ -550,14 +519,11 @@ transition: all .2s ease-in-out;
 #subscribe-container {
     height: calc(100vh - 215px);
     min-height: 860px;
-    /*background: grey;*/
-    /*display: none;*/
 }
 
 #subscribe-inner-container {
     max-width: 1366px;
     margin: auto;
-    /*background-color: #6E7BFF;*/
 }
 
 .subscribe-headline-container {
@@ -579,7 +545,6 @@ transition: all .2s ease-in-out;
 
 .card-bg {
     width: 875px;
-    /*height: 560px;*/
     height: auto;
     background-color: #ffffff;
     margin: auto;
@@ -588,7 +553,6 @@ transition: all .2s ease-in-out;
     -moz-box-shadow: 0px 9px 15px 0px rgba(186,192,207,0.30);
     box-shadow: 0px 9px 15px 0px rgba(186,192,207,0.30);
     transform: translateY(25px);
-    /*padding: 70px 0 70px 0;*/
     box-sizing: border-box;
     padding: 70px 30px 70px 30px;
 }
@@ -596,7 +560,6 @@ transition: all .2s ease-in-out;
 .subscribe-for-alpha {
     max-width: 425px;
     height: auto;
-    /*background-color: #EAEBF1;*/
     margin: auto;
 }
 
@@ -664,7 +627,6 @@ transition: all .2s ease-in-out;
 
 .subscription-feedback {
     max-width: 770px;
-    /*height: auto;*/
     margin: auto;
     text-align: center;
     height: calc(100vh - 215px);
@@ -735,8 +697,6 @@ transition: all .2s ease-in-out;
 }
 
 
-
-
 /*terms ------------------------------------------------------------------------------*/
 
 .terms-container {
@@ -756,7 +716,6 @@ transition: all .2s ease-in-out;
 
 #mobile-menu {
     height: 100vh;
-    /*position: absolute;*/
     width: 100%;
     position: fixed;
     z-index: 2;
@@ -766,8 +725,6 @@ transition: all .2s ease-in-out;
     background-image: linear-gradient(0deg, #F6F6F9 48%, #FFFFFF 100%);
     display: none;
 }
-
-/*background-image: linear-gradient(0deg, #F6F6F9 48%, #FFFFFF 100%);*/
 
 #close-mobile-menu-btn {
     position: absolute;
@@ -798,10 +755,10 @@ transition: all .2s ease-in-out;
     margin-top: 30px;
 }
 
+
 /*downloads------------------------------------------------------------------------*/
 
 #downloads-container {
-    /*max-width: 1010px;*/
     margin: auto;
     max-width: 1030px;
 }
@@ -848,7 +805,6 @@ transition: all .2s ease-in-out;
 
 .device-type {
     height: auto;
-    /*background-color: #EAEBF1;*/
     padding: 20px 0 20px 0;
 }
 
@@ -860,11 +816,9 @@ transition: all .2s ease-in-out;
     text-transform: uppercase;
     font-size: 14px;
     color: #636185;
-    /*float: right;*/
     padding: 20px 20px 20px 40px;
     text-align: right;
     border-radius: 5px;
-    /*background-color: #cccccc;*/
     background: url("../images/download-icon-white.svg") 15px 3px no-repeat;
     transition: all ease-out 0.3s;
     cursor: pointer;
@@ -876,7 +830,7 @@ transition: all .2s ease-in-out;
     font-size: 14px;
     color: #9B9AA9;
     /*float: right;*/
-    padding: 20px 20px 20px 40px;
+    padding: 20px;
     text-align: right;
     border-radius: 5px;
     font-weight: bold;
@@ -914,6 +868,7 @@ transition: all .2s ease-in-out;
     transform: translate(-50%, 0);
 }
 
+
 /*404 error ------------------------------------------------------------------------*/
 
 #error-main-container {
@@ -924,10 +879,8 @@ transition: all .2s ease-in-out;
 }
 
 #logo-container {
-    /*max-width: 30%;*/
     text-align: center;
     width: 100%;
-    /*margin: auto;*/
     margin: 0 auto 80px auto;
 }
 
@@ -965,12 +918,13 @@ transition: all .2s ease-in-out;
     margin: auto;
 }
 
-#error-footer, .secondary-text {
+#error-footer > secondary-text {
     max-width: 430px;
     padding-top: 30px;
+    margin: auto;
 }
 
-#error-footer .button-container {
+#error-footer >button-container {
     float: none;
     display: block;
     text-align: center;
@@ -978,17 +932,23 @@ transition: all .2s ease-in-out;
     color: #9B9AA9;
 }
 
-#error-footer, .secondary-btn {
+#error-footer > .secondary-btn {
     color: #9B9AA9;
 
+}
+
+@media only screen and (min-width: 1387px) {
+    #above-the-fold {
+        max-width: 1366px;
+        padding-left: 0;
+    }
 }
 
 @media only screen and (min-width: 1366px) {
 
     #above-the-fold {
-        /*background-color: #ff9555;*/
         max-width: 1366px;
-        padding-left: 0;
+        /*padding-left: 60px;*/
     }
 
     .cover-image {
@@ -1001,7 +961,6 @@ transition: all .2s ease-in-out;
 
     #section-1 {
         max-width: 1366px;
-        /*background-color: #ffff99;*/
     }
 
     .left-ui {
@@ -1019,7 +978,6 @@ transition: all .2s ease-in-out;
         max-width: 1366px;
         margin: auto;
         height: 875px;
-        /*background-color: #d3c774;*/
     }
 
     .right-ui {
@@ -1030,6 +988,7 @@ transition: all .2s ease-in-out;
 }
 
 @media only screen and (max-width: 1130px) {
+
     .download-btn {
         width: 44%;
     }
@@ -1048,19 +1007,12 @@ transition: all .2s ease-in-out;
 
 }
 
+
 @media only screen and (max-width: 950px) {
 
     #above-the-fold {
         padding-left: 40px;
         padding-top: 50px;
-    }
-
-    .left-container {
-        /*width: 70%;*/
-    }
-
-    .right-container {
-        /*width: 30%;*/
     }
 
     .cover-image {
@@ -1073,6 +1025,7 @@ transition: all .2s ease-in-out;
 
     .feature-card {
         width: 48%;
+        margin: 0 1% 15px;;
     }
 
     .left-description {
@@ -1131,12 +1084,6 @@ transition: all .2s ease-in-out;
         position: initial;
         margin: -10px;
     }
-
-    /*#subscribe-container {*/
-        /*height: auto;*/
-        /*overflow: hidden;*/
-        /*!*display: inline-block;*!*/
-    /*}*/
 
     .subscribe-for-alpha {
         width: 100%;
@@ -1204,19 +1151,12 @@ transition: all .2s ease-in-out;
         height: 440px;
     }
 
-    #features {
-        /*padding: 60px 40px 100px 40px;*/
-
-    }
-
     .feature-card {
         width: 100%;
-        /*margin-bottom: 20px;*/
         margin: 0 0 20px 0;
     }
 
     #section-1 {
-        /*height: auto;*/
         text-align: center;
         position: relative;
         height: 860px;
@@ -1245,7 +1185,6 @@ transition: all .2s ease-in-out;
     }
 
     .top-footer {
-    /*height: 200px;*/
     position: relative;
     line-height: normal;
     padding: 130px 40px;
@@ -1264,7 +1203,7 @@ transition: all .2s ease-in-out;
 
     .downloads-headline {
         width: 100%;
-        padding: 0 30px;
+        padding: 0 60px;
         box-sizing: border-box;
     }
 
@@ -1304,11 +1243,6 @@ transition: all .2s ease-in-out;
         margin-top: 20px;
     }
 
-    /*.app-details {*/
-        /*display: block;*/
-        /*margin: auto;*/
-    /*}*/
-
     .tertiary-button {
         background: url("../images/download-icon.svg") 15px center no-repeat;
         font-weight: bold;
@@ -1327,6 +1261,7 @@ transition: all .2s ease-in-out;
 
 }
 
+
 @media only screen and (max-width: 650px) {
 
 
@@ -1342,10 +1277,8 @@ transition: all .2s ease-in-out;
         width: 100%;
     }
 
-
-
-
 }
+
 
 @media only screen and (max-width: 600px) {
 
@@ -1357,7 +1290,6 @@ transition: all .2s ease-in-out;
         width: 100%;
     }
 
-
     .subscribe-form-container {
         background-size: 880px;
         height: 675px;
@@ -1368,6 +1300,7 @@ transition: all .2s ease-in-out;
     }
 
 }
+
 
 @media only screen and (max-width: 500px) {
 
@@ -1404,6 +1337,10 @@ transition: all .2s ease-in-out;
 
     .error-type-style {
         font-size: 150px;
+    }
+
+    .top-image {
+        top: 150px;
     }
 
 }
@@ -1507,10 +1444,6 @@ transition: all .2s ease-in-out;
         padding: 0 15px;
     }
 
-    .top-image {
-        top: 150px;
-    }
-
     .error-container {
         background: url(../images/downloads-bubble.svg) no-repeat center 20px;
         background-size: 100%;
@@ -1570,7 +1503,22 @@ transition: all .2s ease-in-out;
         margin-top: 0;
     }
 
+    .downloads-headline {
+        margin: 30px auto 0 auto;
+        padding: 0 30px;
+    }
+
+    .downloads-headline > .secondary-title {
+        line-height: 35px;
+        font-size: 20px;
+    }
+
+    .top-image {
+        top: 120px;
+    }
+
 }
+
 
 @media only screen and (min-height: 1024px) {
 
