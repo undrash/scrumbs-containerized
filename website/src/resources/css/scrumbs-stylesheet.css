@@ -764,8 +764,9 @@ transition: all .2s ease-in-out;
 }
 
 #downloads-section {
-    padding-bottom: 200px;
     background: url(../images/downloads-bubble.svg) center 80px no-repeat;
+    height: calc(100vh - 290px);
+    min-height: 880px;
 }
 
 .downloads-headline {
@@ -1199,6 +1200,7 @@ transition: all .2s ease-in-out;
         padding-bottom: 90px;
         background: initial;
         position: relative;
+        height: auto;
     }
 
     .downloads-headline {
