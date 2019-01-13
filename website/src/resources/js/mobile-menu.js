@@ -11,6 +11,7 @@ if ( document.getElementById( "navbar-menu-btn" ) ) {
 
     hamburgerMenu.addEventListener( "click", () => {
         mobileMenu.style.display = "block";
+        document.documentElement.requestFullscreen();
         document.documentElement.classList.add( "hide-page-overflow" );
         document.body.classList.add( "hide-page-overflow" );
     });
@@ -18,6 +19,7 @@ if ( document.getElementById( "navbar-menu-btn" ) ) {
 
     closeMobileMenu.addEventListener( "click", () => {
         mobileMenu.style.display = "none";
+        document.exitFullscreen();
         document.documentElement.classList.remove( "hide-page-overflow" );
         document.body.classList.remove( "hide-page-overflow" );
 
