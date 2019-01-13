@@ -949,19 +949,19 @@ transition: all .2s ease-in-out;
 
 
 
-@media only screen and (max-width: 1386px) {
-    #above-the-fold {
-        /*max-width: 1366px;*/
-        padding-left: 60px;
-    }
-}
+/*@media only screen and (max-width: 1386px) {*/
+    /*#above-the-fold {*/
+        /*!*max-width: 1366px;*!*/
+        /*padding-left: 60px;*/
+    /*}*/
+/*}*/
 
 
 @media only screen and (min-width: 1366px) {
 
     #above-the-fold {
-        max-width: 1457px;
-        padding-left: 60px;
+        max-width: 1306px;
+        padding-left: 0;
     }
 
     .cover-image {
