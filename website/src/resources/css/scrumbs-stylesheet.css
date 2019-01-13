@@ -1581,6 +1581,15 @@ transition: all .2s ease-in-out;
 }
 
 
+/** Test for IOS */
+
+@supports (-webkit-overflow-scrolling: touch) {
+    #close-mobile-menu-btn {
+        bottom: 80px;
+    }
+}
+
+
 
 
 
