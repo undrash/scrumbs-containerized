@@ -31,6 +31,15 @@ ul {
     list-style: none;
 }
 
+
+.hide-page-overflow {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+
+
 .primary-button {
     padding: 20px;
     background: -webkit-linear-gradient(90deg, #6CB7FF 0%, #7985FF 100%);

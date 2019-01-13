@@ -10,14 +10,16 @@ if ( document.getElementById( "navbar-menu-btn" ) ) {
 
 
     hamburgerMenu.addEventListener( "click", () => {
-        mobileMenu.style.display        = "block";
-        document.body.style.overflow    = "hidden";
+        mobileMenu.style.display = "block";
+        document.documentElement.classList.add( "hide-page-overflow" );
+        document.body.classList.add( "hide-page-overflow" );
     });
 
 
     closeMobileMenu.addEventListener( "click", () => {
-        mobileMenu.style.display        = "none";
-        document.body.style.overflow    = "auto";
+        mobileMenu.style.display = "none";
+        document.documentElement.classList.remove( "hide-page-overflow" );
+        document.body.classList.remove( "hide-page-overflow" );
 
     });
 }
