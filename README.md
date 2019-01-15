@@ -15,7 +15,7 @@
   <br>
   <br>
   
-  <h1>Aiming for the best experience.</h1>
+  <h1>Bringing you the best experience.</h1>
   
   <p>Scrumbs was designed to provide the best possible experience through simplicity and style. Our main objective was to make something that not only looks good, but feels great to use.</p>
   
