@@ -46,7 +46,8 @@ export class Authentication extends ViewComponent {
     private emailInput: HTMLInputElement;
     private passwordInput: HTMLInputElement;
     private checkboxSection: HTMLElement;
-    private rememberMe: HTMLInputElement;
+    private rememberMeCheckbox: HTMLElement;
+    private rememberMeInput: HTMLInputElement;
     private forgotPassword: HTMLElement;
     private authFooter: HTMLElement;
     private actionBtn: HTMLElement;
@@ -83,7 +84,8 @@ export class Authentication extends ViewComponent {
         this.emailInput                 = document.getElementById( "authentication-email" ) as HTMLInputElement;
         this.passwordInput              = document.getElementById( "authentication-password" ) as HTMLInputElement;
         this.checkboxSection            = document.getElementById( "checkbox-wrapper" );
-        this.rememberMe                 = document.getElementById( "authentication-remember-me" ) as HTMLInputElement;
+        this.rememberMeCheckbox         = document.getElementById( "remember-me-checkbox" );
+        this.rememberMeInput            = document.getElementById( "remember-me-input" ) as HTMLInputElement;
         this.forgotPassword             = document.getElementById( "authentication-forgot-password" );
         this.authFooter                 = document.getElementById( "authentication-footer" );
         this.actionBtn                  = document.getElementById( "authentication-button-action" );
@@ -110,6 +112,7 @@ export class Authentication extends ViewComponent {
         this.mobileInputFocusHandler    = this.mobileInputFocusHandler.bind( this );
         this.mobileInputBlurHandler     = this.mobileInputBlurHandler.bind( this );
         this.forgotPasswordHandler      = this.forgotPasswordHandler.bind( this );
+        this.rememberMeClickHandler     = this.rememberMeClickHandler.bind( this );
 
 
         this.enterScene();
@@ -134,6 +137,8 @@ export class Authentication extends ViewComponent {
 
         this.forgotPassword.addEventListener( "click", this.forgotPasswordHandler );
 
+        this.rememberMeCheckbox.addEventListener( "click", this.rememberMeClickHandler );
+
         document.addEventListener( "keypress", this.submitFormHandler, true );
 
     }
@@ -157,6 +162,8 @@ export class Authentication extends ViewComponent {
         this.passwordInput.removeEventListener( "click", this.passwordInputHandler, true );
 
         this.forgotPassword.removeEventListener( "click", this.forgotPasswordHandler );
+
+        this.rememberMeCheckbox.removeEventListener( "click", this.rememberMeClickHandler );
 
         document.removeEventListener( "keypress", this.submitFormHandler, true );
 
@@ -298,6 +305,12 @@ export class Authentication extends ViewComponent {
 
         this.exitScene( ViewExitTypes.SWITCH );
 
+    }
+
+
+
+    private rememberMeClickHandler(e: any): void {
+        this.rememberMeInput.checked = ! this.rememberMeInput.checked;
     }
 
 
