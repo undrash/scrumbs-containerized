@@ -12,6 +12,7 @@ import Back = gsap.Back;
 
 //CSS
 import "../_style/style-sheets/header.scss";
+import {AuthenticationNotifications} from "../authentication/AuthenticationNotifications";
 
 //HTML template
 const template = require("../_view-templates/header.html");
@@ -151,6 +152,12 @@ export class HeaderView extends View {
 
         notifications.push( RecordNotifications.RECORD_ADDED );
 
+        notifications.push( AuthenticationNotifications.USER_AUTHENTICATED );
+
+        notifications.push( AuthenticationNotifications.USER_SIGNED_UP );
+
+
+
         return notifications;
     }
 
@@ -240,6 +247,12 @@ export class HeaderView extends View {
 
 
 
+    private generateAcronymFromName(firstName: string, lastName: string): void {
+        this.profileImage.innerHTML = firstName[ 0 ] + " " + lastName[ 0 ];
+    }
+
+
+
     public enterScene(): void {
         this.registerEventListeners();
 
@@ -266,6 +279,16 @@ export class HeaderView extends View {
             case RecordNotifications.RECORD_ADDED :
 
                 this.addRecordBtnAnimation();
+
+                break;
+
+            case AuthenticationNotifications.USER_AUTHENTICATED :
+
+            case AuthenticationNotifications.USER_SIGNED_UP :
+
+                const { firstName, lastName } = notification.data.userData;
+
+                this.generateAcronymFromName( firstName, lastName );
 
                 break;
 

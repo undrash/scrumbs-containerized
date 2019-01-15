@@ -119,6 +119,8 @@
       font-size: 0.85em;
       @include drop-shadow( $shadow-quaternary-color, 0, 0, 0, 1px );
       margin-right: 3px;
+      text-align: center;
+      line-height: 30px;
     }
 
     .profile-dropdown-icon {
