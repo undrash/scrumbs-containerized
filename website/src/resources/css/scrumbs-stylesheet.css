@@ -274,6 +274,11 @@ ul {
     padding-top: 50px;
     padding-bottom: 50px;
     border-radius: 5px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.feature-card:hover {
+    box-shadow: 0 15px 30px -10px rgba(121, 133, 255, 0.2);
 }
 
 .feature-card-icon {
@@ -990,6 +995,7 @@ transition: all .2s ease-in-out;
     .left-ui {
         position: absolute;
         background: url("../images/left-ui.svg") no-repeat left;
+        background-size: 700px;
     }
 
     .right-description {
@@ -1006,6 +1012,7 @@ transition: all .2s ease-in-out;
 
     .right-ui {
         position: absolute;
+        background-size: 700px;
     }
 
 
