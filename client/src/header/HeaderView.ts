@@ -77,6 +77,7 @@ export class HeaderView extends View {
         this.scrumBtnHandler                    = this.scrumBtnHandler.bind( this );
         this.keyPressHandler                    = this.keyPressHandler.bind( this );
         this.signOutHandler                     = this.signOutHandler.bind( this );
+        this.dropDownMouseLeaveHandler          = this.dropDownMouseLeaveHandler.bind( this );
     }
 
 
@@ -101,6 +102,8 @@ export class HeaderView extends View {
         this.blockersBtn.addEventListener( "click", this.blockersBtnHandler );
 
         this.signOut.addEventListener( "click", this.signOutHandler );
+
+        this.dropdown.addEventListener( "mouseleave", this.dropDownMouseLeaveHandler );
 
         document.addEventListener( "keypress", this.keyPressHandler );
 
@@ -129,6 +132,8 @@ export class HeaderView extends View {
         this.blockersBtn.removeEventListener( "click", this.blockersBtnHandler );
 
         this.signOut.removeEventListener( "click", this.signOutHandler );
+
+        this.dropdown.removeEventListener( "mouseleave", this.dropDownMouseLeaveHandler );
 
         document.removeEventListener( "keypress", this.keyPressHandler );
 
@@ -231,6 +236,12 @@ export class HeaderView extends View {
             if ( this.dropdown.style.display === "block" ) this.dropdown.style.display = "none";
 
         }
+    }
+
+
+
+    private dropDownMouseLeaveHandler(e: any): void {
+        this.dropdown.style.display = "none";
     }
 
 
