@@ -96,6 +96,7 @@
                   center;
       @include drop-shadow( $shadow-tertiary-color, 7px, 7px, 0, -2px );
       margin-right: 15px;
+      float: right;
     }
 
     #profile-container, .profile-image {
@@ -124,13 +125,14 @@
     }
 
     .profile-dropdown-icon {
-      width: 6px;
-      height: 10px;
+      width: 28px;
+      height: 28px;
       border: none;
       background: url( "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI2cHgiIHZpZXdCb3g9IjAgMCAxMCA2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IHNrZXRjaHRvb2wgNTAgKDU0OTgzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5CMUM3MUUxQS0zRTAyLTQ4NkQtOEQ5OS0xNDY5NjVDQTFBRkE8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIHNrZXRjaHRvb2wuPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IlRlYW0tTm90ZXMtOTUwcHgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05MjUuMDAwMDAwLCAtMjIuMDAwMDAwKSIgZmlsbD0iIzk2NzlGRiIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGcgaWQ9Ik5hdmJhciI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOTMyLjU3Nzg5NiwyNS4yNzI4MjkyIEw5MjguMzg3MjkxLDI5LjU3MjUzNjggQzkyOC4xMjA3MTgsMjkuODQ2MTkxNCA5MjcuNjg4NTE1LDI5Ljg0NjE5MTQgOTI3LjQyMjA3MSwyOS41NzI1MzY4IEM5MjcuMTU1NjA2LDI5LjI5OTEyNTcgOTI3LjE1NTYwNiwyOC44NTU2NzkxIDkyNy40MjIwNzEsMjguNTgyMjkwMSBMOTMxLjEzMDExLDI0Ljc3NzcwNTkgTDkyNy40MjIxNzksMjAuOTczMjU0MyBDOTI3LjE1NTcxNCwyMC42OTk3MzI2IDkyNy4xNTU3MTQsMjAuMjU2MzMwMyA5MjcuNDIyMTc5LDE5Ljk4MjkxOTEgQzkyNy42ODg2NDQsMTkuNzA5Mzk3MyA5MjguMTIwODI1LDE5LjcwOTM5NzMgOTI4LjM4NzM5OSwxOS45ODI5MTkxIEw5MzIuNTc4MDA0LDI0LjI4MjY5MzIgQzkzMi43MTEyMzcsMjQuNDE5NDY1MSA5MzIuNzc3Nzc4LDI0LjU5ODUzMDIgOTMyLjc3Nzc3OCwyNC43Nzc2ODM3IEM5MzIuNzc3Nzc4LDI0Ljk1NjkyNTggOTMyLjcxMTEwOCwyNS4xMzYxMjM2IDkzMi41Nzc4OTYsMjUuMjcyODI5MiBaIiBpZD0iZGQtYXJyb3ciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkzMC4wMDAwMDAsIDI0Ljc3Nzc3OCkgcm90YXRlKC0yNzAuMDAwMDAwKSB0cmFuc2xhdGUoLTkzMC4wMDAwMDAsIC0yNC43Nzc3NzgpICI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=" )
                   no-repeat
                   center;
-      background-size: contain;
+      float: right;
+
     }
 
 

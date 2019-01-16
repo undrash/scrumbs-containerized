@@ -48,6 +48,7 @@ export class Authentication extends ViewComponent {
     private checkboxSection: HTMLElement;
     private rememberMeCheckbox: HTMLElement;
     private rememberMeInput: HTMLInputElement;
+    private rememberMeLabel: HTMLElement;
     private forgotPassword: HTMLElement;
     private authFooter: HTMLElement;
     private actionBtn: HTMLElement;
@@ -86,6 +87,7 @@ export class Authentication extends ViewComponent {
         this.checkboxSection            = document.getElementById( "checkbox-wrapper" );
         this.rememberMeCheckbox         = document.getElementById( "remember-me-checkbox" );
         this.rememberMeInput            = document.getElementById( "remember-me-input" ) as HTMLInputElement;
+        this.rememberMeLabel            = document.getElementById( "authentication-remember-me-label" );
         this.forgotPassword             = document.getElementById( "authentication-forgot-password" );
         this.authFooter                 = document.getElementById( "authentication-footer" );
         this.actionBtn                  = document.getElementById( "authentication-button-action" );
@@ -139,6 +141,9 @@ export class Authentication extends ViewComponent {
 
         this.rememberMeCheckbox.addEventListener( "click", this.rememberMeClickHandler );
 
+        this.rememberMeLabel.addEventListener( "click", this.rememberMeClickHandler );
+
+
         document.addEventListener( "keypress", this.submitFormHandler, true );
 
     }
@@ -146,8 +151,6 @@ export class Authentication extends ViewComponent {
 
 
     private unregisterEventListeners(): void {
-
-        console.log( "Trying to remove event listeners" );
 
         this.actionBtn.removeEventListener( "click", this.actionBtnHandler, true );
 
@@ -164,6 +167,9 @@ export class Authentication extends ViewComponent {
         this.forgotPassword.removeEventListener( "click", this.forgotPasswordHandler );
 
         this.rememberMeCheckbox.removeEventListener( "click", this.rememberMeClickHandler );
+
+        this.rememberMeLabel.removeEventListener( "click", this.rememberMeClickHandler );
+
 
         document.removeEventListener( "keypress", this.submitFormHandler, true );
 
