@@ -3,5 +3,3 @@ FROM nginx:alpine
 RUN rm /etc/nginx/conf.d/default.conf
 ADD nginx.conf /etc/nginx/conf.d/default.conf
 
-ADD scrumbs-website /var/www/scrumbs-website
-ADD scrumbs-client /var/www/scrumbs-client

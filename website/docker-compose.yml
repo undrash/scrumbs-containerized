@@ -1,0 +1,27 @@
+
+version: "3.1"
+
+services:
+
+  website:
+    build:
+          context: ./
+          dockerfile: Dockerfile
+    depends_on:
+      - mongo
+    restart: always
+    ports:
+      - "4000:4000"
+    networks:
+      - scrumbs
+
+  mongo:
+    image: mongo
+    expose:
+      - "27017"
+    networks:
+      - scrumbs
+
+
+networks:
+  scrumbs:

@@ -3,9 +3,8 @@ client/node_modules
 client/dist
 api/node_modules
 api/dist
-subscriptions/node_modules
-subscriptions/ormconfig.json
 website/node_modules
+website/build
 nginx/scrumbs-client
 nginx/scrumbs-website
 **/*.env
