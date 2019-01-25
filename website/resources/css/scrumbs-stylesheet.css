@@ -909,6 +909,12 @@ transition: all .2s ease-in-out;
     margin: 0 auto 80px auto;
 }
 
+#error-main-container #logo-container {
+    display: block;
+    margin: auto auto 85px;
+}
+
+
 .error-container {
     max-width: 610px;
     text-align: center;
@@ -943,13 +949,14 @@ transition: all .2s ease-in-out;
     margin: auto;
 }
 
-#error-footer > secondary-text {
+
+#error-footer > .secondary-text {
     max-width: 430px;
     padding-top: 30px;
     margin: auto;
 }
 
-#error-footer >button-container {
+#error-footer > .button-container {
     float: none;
     display: block;
     text-align: center;
