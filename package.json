@@ -2,7 +2,7 @@
   "name": "scrumbs-containerized",
   "scripts": {
     "start:development": "docker-compose -f docker-compose.dev.yml down && npm run build-dev --prefix client/ && docker-compose -f docker-compose.dev.yml build && docker-compose -f docker-compose.dev.yml up",
-    "start:production": "docker-compose down && npm run build --prefix client/ && npm run build --prefix website/ && docker-compose build && docker-compose up -d",
+    "start:production": "docker-compose down && npm run build --prefix client/ && docker-compose build && docker-compose up -d",
     "restart:development": "docker-compose -f docker-compose.dev.yml down && docker-compose -f docker-compose.dev.yml build && docker-compose -f docker-compose.dev.yml up",
     "restart:production": "docker-compose down && docker-compose build && docker-compose up -d",
     "install": "npm install --prefix client/ && npm install --prefix website/"
