@@ -2,7 +2,7 @@
 <div align="center">
   <a href="https://www.scrumbs.app/">
     <img width="280px"
-      src="https://www.scrumbs.app/resources/images/scrumbs%20logo-colored.svg">
+      src="https://www.scrumbs.app/public/images/scrumbs-logo-colored.svg">
   </a>
   
   <br>
@@ -22,7 +22,7 @@
   <br>
   
   <img width="420px"
-      src="https://www.scrumbs.app/resources/images/right-ui.svg">
+      src="https://www.scrumbs.app/public/images/right-ui.svg">
       
   <br>
   
